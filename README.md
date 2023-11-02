@@ -1,2 +1,2 @@
 # Pattern-Recognition-Course
-a repository of pattern recognition course
+A repository of pattern recognition course
