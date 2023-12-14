@@ -1,0 +1,40 @@
+特征提取方式
+1. pca
+2. kpca(rbf, poly, sigmoid, cosine, precomputed)
+3. lda
+4. dict_learning
+5. dl
+
+分类方法
+1. svm('linear', 'poly', 'rbf', 'sigmoid', 'precomputed')
+2. knn('uniform', 'distance')
+
+流形方法
+1. isomap
+2. lle
+3. tsne
+
+
+分类方法
+1. svm('linear', 'poly', 'rbf', 'sigmoid', 'precomputed')
+2. knn('uniform', 'distance')
+3. dtc('gini', 'entropy')
+4. rfc('gini', 'entropy')
+5. abc('SAMME', 'SAMME.R')
+6. gbc('deviance', 'exponential')
+7. lrc('ovr', 'multinomial')
+8. mlp('lbfgs', 'sgd', 'adam')
+9. gpc('linear', 'poly', 'rbf', 'sigmoid', 'precomputed')
+10. qda()
+11. lda()
+12. lsvc('ovr', 'crammer_singer')
+13. nusvc('ovr', 'crammer_singer')
+14. bnb()
+15. mnb()
+16. gnb()
+17. dnn('relu', 'tanh', 'sigmoid', 'linear', 'softmax', 'softplus', 'softsign', 'hard_sigmoid', 'linear')
+18. cnn('relu', 'tanh', 'sigmoid', 'linear', 'softmax', 'softplus', 'softsign', 'hard_sigmoid', 'linear')
+19. rnn('relu', 'tanh', 'sigmoid', 'linear', 'softmax', 'softplus', 'softsign', 'hard_sigmoid', 'linear')
+20. lstm('relu', 'tanh', 'sigmoid', 'linear', 'softmax', 'softplus', 'softsign', 'hard_sigmoid', 'linear')
+21. gru('relu', 'tanh', 'sigmoid', 'linear', 'softmax', 'softplus', 'softsign', 'hard_sigmoid', 'linear')
+
