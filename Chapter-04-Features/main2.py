@@ -5,11 +5,13 @@ from utils import auto_sample, evaluator
 from feature_extractor import FeatureExtractor
 from classifier import Classifier
 from manifold import ManifoldPlot
+from tsnecuda import TSNE
+import matplotlib.pyplot as plt
 
 data_dir = "data"
 output_dir = 'output'
 img_name_list = ["0618.png", "0854.png", "1066.png"]
-img_name = img_name_list[0]
+img_name = img_name_list[2]
 img = cv2.imread(os.path.join(data_dir, img_name))
 # 对图像img做中值滤波
 img = cv2.medianBlur(img, 5)
@@ -32,19 +34,44 @@ data = img.reshape(-1, 3)
 sample_interval = 30
 train_data, train_label = auto_sample(data_dir, img_name, output_dir, sample_interval)
 
+# 提取hog特征
+# hog = cv2.HOGDescriptor()
+# train_data = np.array([hog.compute(train_data[i].reshape(30, 30, 3)) for i in range(len(train_data))])
+# train_data = train_data.reshape(-1, 324)
+# data = np.array([hog.compute(data[i].reshape(30, 30, 3)) for i in range(len(data))])
+# data = data.reshape(-1, 324)
+
+
 
 feature_extractor = FeatureExtractor(train_data, train_label, data)
 feature_extractor.original_feature()
-feature_extractor.pca_feature(n_components=2)
+feature_extractor.kpca_feature(n_components=3, kernel='poly')
 
 classifier = Classifier(feature_extractor)
 classifier.knn_clf()
 res = classifier.res
-cv2.imshow("res", res)
-cv2.waitKey(0)
+# cv2.imshow("res", res)
+plt.imshow(res)
+plt.show()
+# cv2.waitKey(0)
 print(evaluator(res, img_mask))
 
-manifold_plot = ManifoldPlot(train_data, train_label, data)
-manifold_plot.tsne_plot()
-manifold_plot.isomap_plot()
-manifold_plot.lle_plot()
+# TODO: 使用tsne-cuda加速
+# 使用tsne-cuda加速
+tsne = TSNE(n_components=2)
+data_tsne = tsne.fit_transform(feature_extractor.data)
+print(data_tsne.shape)
+# print(data_tsne)
+# 展示降维后的数据
+import matplotlib.pyplot as plt
+# res将255转换为1
+# res = res.astype(np.uint8)
+res = res // 255
+plt.scatter(data_tsne[:, 0], data_tsne[:, 1], c=res.reshape(-1), alpha=0.10)
+print(data_tsne[:, 0])
+plt.show()
+
+# manifold_plot = ManifoldPlot(train_data, train_label, data)
+# manifold_plot.tsne_plot()
+# manifold_plot.isomap_plot()
+# manifold_plot.lle_plot()
