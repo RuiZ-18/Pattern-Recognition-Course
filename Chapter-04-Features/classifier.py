@@ -46,9 +46,9 @@ class Classifier:
         clf.fit(self.train_data, self.train_label)
         self.res = (clf.predict(self.data).reshape(self.img_h, self.img_w) * 255).astype(np.uint8)
 
-    def random_forest_clf(self):
+    def random_forest_clf(self, n_estimators=10):
         from sklearn.ensemble import RandomForestClassifier
-        clf = RandomForestClassifier(n_estimators=10)
+        clf = RandomForestClassifier(n_estimators=n_estimators)
         clf.fit(self.train_data, self.train_label)
         self.res = (clf.predict(self.data).reshape(self.img_h, self.img_w) * 255).astype(np.uint8)
 
