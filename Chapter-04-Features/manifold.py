@@ -47,7 +47,7 @@ class ManifoldPlot:
         self.train_label = train_label
         self.data = data
 
-    def tsne_plot(self, n_components=2, perplexity=10):
+    def tsne_plot(self, filename, n_components=2, perplexity=10):
         tsne = TSNE(n_components=n_components, perplexity=perplexity)
         tsne_train_data = tsne.fit_transform(self.train_data)
         for i in range(tsne_train_data.shape[0]):
@@ -55,27 +55,30 @@ class ManifoldPlot:
                 plt.scatter(tsne_train_data[i, 0], tsne_train_data[i, 1], c='r')
             else:
                 plt.scatter(tsne_train_data[i, 0], tsne_train_data[i, 1], c='b')
-        plt.show()
+        plt.savefig(filename)
+        # plt.show()
 
-    def isomap_plot(self, n_components=2, n_neighbors=5):
+    def isomap_plot(self, filename, n_components=2, n_neighbors=5):
         isomap = Isomap(n_components=n_components, n_neighbors=n_neighbors)
         isomap_train_data = isomap.fit_transform(self.train_data)
         for i in range(isomap_train_data.shape[0]):
             if self.train_label[i] == 1:
-                plt.scatter(isomap_train_data[i, 0], isomap_train_data[i, 1], c='r')
+                plt.scatter(isomap_train_data[i, 0], isomap_train_data[i, 1], c='r', alpha=0.1)
             else:
-                plt.scatter(isomap_train_data[i, 0], isomap_train_data[i, 1], c='b')
-        plt.show()
+                plt.scatter(isomap_train_data[i, 0], isomap_train_data[i, 1], c='b', alpha=0.1)
+        plt.savefig(filename)
+        # plt.show()
 
-    def lle_plot(self, n_components=2, n_neighbors=5):
+    def lle_plot(self, filename, n_components=2, n_neighbors=5):
         lle = LocallyLinearEmbedding(n_components=n_components, n_neighbors=n_neighbors)
         lle_train_data = lle.fit_transform(self.train_data)
         for i in range(lle_train_data.shape[0]):
             if self.train_label[i] == 1:
-                plt.scatter(lle_train_data[i, 0], lle_train_data[i, 1], c='r')
+                plt.scatter(lle_train_data[i, 0], lle_train_data[i, 1], c='r', alpha=0.1)
             else:
-                plt.scatter(lle_train_data[i, 0], lle_train_data[i, 1], c='b')
-        plt.show()
+                plt.scatter(lle_train_data[i, 0], lle_train_data[i, 1], c='b', alpha=0.1)
+        plt.savefig(filename)
+        # plt.show()
 
     # 保存流行图，放在每个前面每个函数的最后一行
 

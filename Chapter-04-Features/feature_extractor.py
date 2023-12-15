@@ -64,9 +64,9 @@ class FeatureExtractor:
         self.train_data = kpca.transform(self.td)
         self.data = kpca.transform(self.d)
 
-    def lda_feature(self, train_label, n_components=1):
+    def lda_feature(self, n_components=1):
         lda = LinearDiscriminantAnalysis(n_components=n_components)
-        lda.fit(self.td, train_label)
+        lda.fit(self.td, self.train_label)
         self.train_data = lda.transform(self.td)
         self.data = lda.transform(self.d)
 

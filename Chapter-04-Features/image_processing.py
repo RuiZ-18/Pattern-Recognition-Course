@@ -4,10 +4,9 @@ import numpy as np
 
 
 class ImageProcess:
-    def __init__(self, img, img_mask):
-        self.image = img
+    def __init__(self, image):
+        self.image = image
         self.img = None
-        self.img_mask = img_mask
 
     def median_blur(self, ksize=5):
         self.img = cv2.medianBlur(self.image, ksize)
@@ -15,7 +14,7 @@ class ImageProcess:
     def gaussian_blur(self, ksize=(5, 5)):
         self.img = cv2.GaussianBlur(self.image, ksize, 0)
 
-    def average_blur(self, ksize=(10, 10)):
+    def average_blur(self, ksize=(5, 5)):
         self.img = cv2.blur(self.image, ksize)
 
     def bilateral_filter(self, d=9, sigmaColor=75, sigmaSpace=75):
