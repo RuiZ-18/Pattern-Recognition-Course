@@ -21,7 +21,7 @@ img = cv2.imread(os.path.join(data_dir, img_name))
 img_mask = cv2.imread(os.path.join(data_dir, img_name[:-4] + "_mask.png"), flags=0)
 data = img.reshape(-1, 3)
 
-sample_interval = 10
+sample_interval = 50
 train_data, train_label = auto_sample(data_dir, img_name, output_dir, sample_interval)
 
 # 1. 图像预处理，包括中值滤波、高斯滤波、均值滤波、双边滤波、均值漂移滤波，并保存图像到output/1_image_processing/目录下
@@ -62,13 +62,13 @@ for filter_item in filter_list:
             manifold_plot_list = ['tsne_plot', 'isomap_plot', 'lle_plot']
             manifold_plot_list = ['isomap_plot', 'lle_plot']
             manifold_plot_params = dict(
-                tsne_plot=[dict({'filename': os.path.join(output_dir, "2_manifold",
+                tsne_plot=[dict({'filename': os.path.join(output_dir, "2_manifold", filter_item,
                                                           "tsne_plot_perplexity_" + str(j) + "_" + img_name),
                                  'n_components': 2, 'perplexity': j}) for j in range(10, 100, 10)],
-                isomap_plot=[dict({'filename': os.path.join(output_dir, "2_manifold",
+                isomap_plot=[dict({'filename': os.path.join(output_dir, "2_manifold", filter_item,
                                                             "isomap_plot_n_neighbors_" + str(j) + "_" + img_name),
                                    'n_components': 2, 'n_neighbors': j}) for j in range(1, 10)],
-                lle_plot=[dict({'filename': os.path.join(output_dir, "2_manifold",
+                lle_plot=[dict({'filename': os.path.join(output_dir, "2_manifold", filter_item,
                                                          "lle_plot_n_neighbors_" + str(j) + "_" + img_name),
                                 'n_components': 2, 'n_neighbors': j}) for j in range(1, 10)]
             )
@@ -81,15 +81,22 @@ for filter_item in filter_list:
             classifier = Classifier(feature_extractor)
             classifier_list = ['svm_clf', 'random_forest_clf', 'knn_clf']
             classifier_params = dict(
-                svm_clf=[dict({'kernel': i}) for i in ['rbf', 'poly', 'sigmoid', 'cosine']],
-                random_forest_clf=[dict({'n_estimators': i}) for i in range(1, 10)],
-                knn_clf=[dict({'n_neighbors': i}) for i in range(1, 10)]
+                svm_clf=[dict({'filename': os.path.join(output_dir, "3_classifier", filter_item,
+                                                        "svm_" + i + "_" + img_name),
+                               'kernel': i}) for i in ['rbf', 'poly', 'sigmoid']],
+                random_forest_clf=[dict({'filename': os.path.join(output_dir, "3_classifier", filter_item,
+                                                                  "random_forest_n_estimators" + str(
+                                                                      i) + "_" + img_name),
+                                         'n_estimators': i}) for i in range(1, 10)],
+                knn_clf=[dict({'filename': os.path.join(output_dir, "3_classifier", filter_item,
+                                                        "random_forest_n_neighbors" + str(
+                                                            i) + "_" + img_name),
+                               'n_neighbors': i}) for i in range(1, 10)]
             )
             for classifier_item in classifier_list:
                 for classifier_param in classifier_params[classifier_item]:
                     classifier.__getattribute__(classifier_item)(**classifier_param)
                     res = classifier.res
-                    cv2.imwrite(os.path.join(output_dir, "3_classifier", classifier_item + "_" + img_name), res)
                     print(evaluator(res, img_mask))
 
 # print(feature_extractor_item)
