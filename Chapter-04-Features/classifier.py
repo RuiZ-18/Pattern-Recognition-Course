@@ -1,34 +1,8 @@
 import numpy as np
 from sklearn import svm
-from feature_extractor import FeatureExtractor
-
-
-def svm_clf(train_data, train_label, data, kernel='poly', img_h=250, img_w=500):
-    clf = svm.SVC(kernel=kernel)
-    clf.fit(train_data, train_label)
-    res = clf.predict(data).reshape(img_h, img_w) * 255
-    res = res.astype(np.uint8)
-    return res
-
-
-# 使用随机树
-def random_forest_clf(train_data, train_label, data, img_h=250, img_w=500):
-    from sklearn.ensemble import RandomForestClassifier
-    clf = RandomForestClassifier(n_estimators=10)
-    clf.fit(train_data, train_label)
-    res = clf.predict(data).reshape(img_h, img_w) * 255
-    res = res.astype(np.uint8)
-    return res
-
-
-# 使用knn
-def knn_clf(train_data, train_label, data, img_h=250, img_w=500):
-    from sklearn.neighbors import KNeighborsClassifier
-    clf = KNeighborsClassifier(n_neighbors=5)
-    clf.fit(train_data, train_label)
-    res = clf.predict(data).reshape(img_h, img_w) * 255
-    res = res.astype(np.uint8)
-    return res
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+import cv2
 
 
 # 写一个类，把所有的分类器都封装起来
@@ -41,19 +15,20 @@ class Classifier:
         self.img_w = img_w
         self.res = None
 
-    def svm_clf(self, kernel='poly'):
+    def svm_clf(self, filename, kernel='poly'):
         clf = svm.SVC(kernel=kernel)
         clf.fit(self.train_data, self.train_label)
         self.res = (clf.predict(self.data).reshape(self.img_h, self.img_w) * 255).astype(np.uint8)
+        cv2.imwrite(filename, self.res)
 
-    def random_forest_clf(self, n_estimators=10):
-        from sklearn.ensemble import RandomForestClassifier
+    def random_forest_clf(self, filename, n_estimators=10):
         clf = RandomForestClassifier(n_estimators=n_estimators)
         clf.fit(self.train_data, self.train_label)
         self.res = (clf.predict(self.data).reshape(self.img_h, self.img_w) * 255).astype(np.uint8)
+        cv2.imwrite(filename, self.res)
 
-    def knn_clf(self, n_neighbors=5):
-        from sklearn.neighbors import KNeighborsClassifier
+    def knn_clf(self, filename, n_neighbors=5):
         clf = KNeighborsClassifier(n_neighbors=n_neighbors)
         clf.fit(self.train_data, self.train_label)
         self.res = (clf.predict(self.data).reshape(self.img_h, self.img_w) * 255).astype(np.uint8)
+        cv2.imwrite(filename, self.res)
