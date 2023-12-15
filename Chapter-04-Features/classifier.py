@@ -52,8 +52,8 @@ class Classifier:
         clf.fit(self.train_data, self.train_label)
         self.res = (clf.predict(self.data).reshape(self.img_h, self.img_w) * 255).astype(np.uint8)
 
-    def knn_clf(self):
+    def knn_clf(self, n_neighbors=5):
         from sklearn.neighbors import KNeighborsClassifier
-        clf = KNeighborsClassifier(n_neighbors=5)
+        clf = KNeighborsClassifier(n_neighbors=n_neighbors)
         clf.fit(self.train_data, self.train_label)
         self.res = (clf.predict(self.data).reshape(self.img_h, self.img_w) * 255).astype(np.uint8)
