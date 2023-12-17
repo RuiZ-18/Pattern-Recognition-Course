@@ -458,10 +458,37 @@ LDA的参数n\_components只能为1，这是因为其在运算中$n\_components 
 
 
 \subsubsection{流形学习方法：评估特征提取效果}
-通过查阅资料，我们发现了一个关于如何高效使用t-SNE的网站{https://distill.pub/2016/misread-tsne/}{(How to Use t-SNE Effectively)}，在这个网站中，可以探究不同样本分布情况下，不同参数对于t-SNE的效果展现。
+通过查阅资料，我们发现关于如何高效使用t-SNE的网站{\href{https://distill.pub/2016/misread-tsne}{\textcolor{red}{(How to Use t-SNE Effectively)}}，在这个网站中，可以探究不同样本分布情况下，不同参数对于t-SNE的效果展现。
 \par
-由于sklearn是在
+在流行学习中，我们采用t-SNE，ISOMAP，lle三种方法进行可视化特征提取效果的可视化展示，由于sklearn是在CPU条件下运行，运算速度特别慢，因此对于这三种方法，我们只针对训练集数据的特征提取效果进行可视化展示。
+\par
+在后续的调研中，我们发现前人在t-SNE的加速上做了很多工作，我们在github上找到了\href{https://github.com/CannyLab/tsne-cuda}{\textcolor{red}{tsne-cuda库}}，该库对于t-SNE进行了显著的加速，加速效果如\autoref{fig:tsnecuda}所示
+\begin{figure}[htbp]
+	\centering
+	\subfigure{
+		\includegraphics[width=.8\linewidth]{pic/mnist_speedup.png}
+}
+	\subfigure{
+		\includegraphics[width=.8\linewidth]{pic/cifar_speedup.png}
+	}
+	\caption{tsnecuda在MINIST和CIFAR数据集上与其他库运算速度的对比}
+	\label{fig:tsnecuda}
+\end{figure}
 
+\par
+原本以为,可以采用tsnecuda进行加速，但是tsnecuda存在很多问题，其中之一就是不能用pca作为初始化，然后通过实验对比，我们发现其效果远不如sklearn。从\autoref{fig:tsnecuda缺点}中，我们不难发现，sklearn上的效果明显要优于tsnecuda。
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[sklearn上的结果]{
+		\includegraphics[width=.45\linewidth, trim=30 30 30 30, clip]{pic/sklearn_res.png}
+	}
+	\subfigure[tsnecuda上的结果]{
+		\includegraphics[width=.45\linewidth, trim=30 30 30 30, clip]{pic/tsnecuda_res.png}
+	}
+	\caption{sklearn和tsnecuda结果对比}
+	\label{fig:tsnecuda缺点}
+\end{figure}
 
 \subsubsection{分类算法：道路分割}
 

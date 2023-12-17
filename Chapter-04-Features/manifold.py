@@ -50,12 +50,14 @@ class ManifoldPlot:
     def tsne_plot(self, filename, n_components=2, perplexity=10):
         tsne = TSNE(n_components=n_components, perplexity=perplexity)
         tsne_train_data = tsne.fit_transform(self.train_data)
-        for i in range(tsne_train_data.shape[0]):
-            if self.train_label[i] == 1:
-                plt.scatter(tsne_train_data[i, 0], tsne_train_data[i, 1], c='r')
-            else:
-                plt.scatter(tsne_train_data[i, 0], tsne_train_data[i, 1], c='b')
-        plt.savefig(filename)
+        plt.scatter(tsne_train_data[:, 0], tsne_train_data[:, 1], c=self.train_label, alpha=0.1)
+        plt.show()
+        # for i in range(tsne_train_data.shape[0]):
+        #     if self.train_label[i] == 1:
+        #         plt.scatter(tsne_train_data[i, 0], tsne_train_data[i, 1], c='r')
+        #     else:
+        #         plt.scatter(tsne_train_data[i, 0], tsne_train_data[i, 1], c='b')
+        # plt.savefig(filename)
         # plt.show()
 
     def isomap_plot(self, filename, n_components=2, n_neighbors=5):

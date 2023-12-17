@@ -47,18 +47,18 @@ feature_extractor = FeatureExtractor(train_data, train_label, data)
 feature_extractor.original_feature()
 feature_extractor.kpca_feature(n_components=3, kernel='poly')
 
-classifier = Classifier(feature_extractor)
-classifier.knn_clf()
-res = classifier.res
-# cv2.imshow("res", res)
-plt.imshow(res)
-plt.show()
-# cv2.waitKey(0)
-print(evaluator(res, img_mask))
+# classifier = Classifier(feature_extractor)
+# classifier.knn_clf()
+# res = classifier.res
+# # cv2.imshow("res", res)
+# plt.imshow(res)
+# plt.show()
+# # cv2.waitKey(0)
+# print(evaluator(res, img_mask))
 
 # TODO: 使用tsne-cuda加速
 # 使用tsne-cuda加速
-tsne = TSNE(n_components=2)
+tsne = TSNE(n_components=2, perplexity=50.0)
 data_tsne = tsne.fit_transform(feature_extractor.data)
 print(data_tsne.shape)
 # print(data_tsne)
@@ -66,12 +66,18 @@ print(data_tsne.shape)
 import matplotlib.pyplot as plt
 # res将255转换为1
 # res = res.astype(np.uint8)
+# 读取mask
+res = cv2.imread(os.path.join(data_dir, img_name[:-4] + "_mask.png"), flags=0)
+
+# res =
 res = res // 255
+res = res.reshape(-1)
+print(res.shape)
 plt.scatter(data_tsne[:, 0], data_tsne[:, 1], c=res.reshape(-1), alpha=0.10)
 print(data_tsne[:, 0])
 plt.show()
 
-# manifold_plot = ManifoldPlot(train_data, train_label, data)
-# manifold_plot.tsne_plot()
+# manifold_plot = ManifoldPlot(data, res, data)
+# manifold_plot.tsne_plot(filename=0)
 # manifold_plot.isomap_plot()
 # manifold_plot.lle_plot()
