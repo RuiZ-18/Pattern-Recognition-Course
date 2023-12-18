@@ -55,9 +55,10 @@ def auto_sample(data_dir, img_name, output_dir, sample_interval_list):
 
 
 # 采样函数，与auto_sample函数采样部分功能相同，但是不需要读取mask，不需要保存图像，返回值同样为train_data和train_label
-def sample(data_dir, img_name, filter_img_dir, filter_img_name, sample_interval):
+def sample(data_dir, img_name, output_dir_filter, filter_img_name, sample_interval):
     img_label = np.load(os.path.join(data_dir, img_name[:-4] + "_label.npy"))
-    img = cv2.imread(os.path.join(filter_img_dir, filter_img_name))
+    label = img_label.reshape(-1)
+    img = cv2.imread(os.path.join(output_dir_filter, filter_img_name))
     img_h, img_w, img_c = img.shape
     sample_img = img.copy()
 
@@ -84,7 +85,7 @@ def sample(data_dir, img_name, filter_img_dir, filter_img_name, sample_interval)
     # label = np.array(label_img, dtype=int).reshape(img_h * img_w)
     train_data = data[sample_indices]
     train_label = np.array(train_label)
-    return train_data, train_label
+    return train_data, train_label, data, label
 
 
 def evaluator(img, img_mask):
