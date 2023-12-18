@@ -10,8 +10,9 @@
 
 % 章节标号设置
 \usepackage{zhnumber} % change section number to chinese
-\renewcommand\thesection{\zhnum{section}}
-\titleformat{\section}{\Large \bfseries }{\thesection、}{0em}{}
+%\renewcommand\thesection{\zhnum{section}}
+%\titleformat{\section}{\Large \bfseries }{\thesection、}{0em}{}
+\titleformat{\section}{\Large \bfseries }{\arabic{section} }{0em}{}
 \titleformat{\subsection}{\bfseries }{\arabic{subsection}、}{0em}{}
 \titleformat{\subsubsection}{\bfseries }{（\arabic{subsubsection}）}{0em}{}
 
@@ -97,8 +98,8 @@
 \thispagestyle{empty} % 首页不显示页码
 
 %%--------------------------目录页------------------------%%
-% \newpage
-% \tableofcontents
+\newpage
+\tableofcontents
 
 %%------------------------正文页从这里开始-------------------%
 \newpage
@@ -303,6 +304,16 @@ LLE是一种非线性的流形学习方法，它假设数据在局部区域内�
 
 
 \subsubsection{分类算法（道路分割）：采用不同的算法进行道路分割，并进行比对}
+\paragraph{支持向量机（Support Vector Machine，SVM）}
+支持向量机是一种监督学习算法，可用于分类和回归问题。在道路分割中，SVM可以用于将图像像素分类为道路和非道路。SVM通过在特征空间中找到最优的超平面来实现分类。它通过将数据映射到高维空间，并找到能够最大化类别间间隔的超平面来进行分类。在道路分割中，SVM可以利用图像的颜色、纹理和边缘等特征来判断像素是否属于道路。
+
+\paragraph{随机森林（Random Forest）}
+随机森林是一种集成学习方法，它由多个决策树组成。在道路分割中，随机森林可以用于像素级别的分类。每个决策树通过选择随机的特征子集和随机的样本子集进行训练。在预测阶段，随机森林中的多个决策树投票决定像素的类别。随机森林具有较好的鲁棒性和泛化能力，能够处理复杂的特征和数据不平衡问题。
+
+\paragraph{K最近邻算法（K-Nearest Neighbors，KNN）}
+K最近邻算法是一种基于实例的学习算法，它在道路分割中常用于像素级别的分类。KNN通过计算距离来确定一个未知样本的类别，即找出其最近的K个邻居，并根据邻居的类别进行投票决策。在道路分割中，KNN可以根据图像像素的颜色、纹理和位置等特征，将其分类为道路或非道路。KNN算法简单易实现，但对于大规模数据集可能计算复杂度较高。
+
+
 
 \subsubsection{数据后处理：采用不同方式对分割后的道路进行进一步优化，提升分割效果}
 数据后处理，我们采用\textbf{形态学处理}的方式。形态学方法是一种基于数学形态学理论的图像处理技术，用于图像的形状分析和特征提取。形态学方法主要应用于二值图像，通过定义结构元素（也称为模板或核）和基本的形态学操作来改变图像的形状和结构。
@@ -346,7 +357,7 @@ LLE是一种非线性的流形学习方法，它假设数据在局部区域内�
 
 \section{实验结果与分析}
 
-\subsubsection{数据准备：真值图像构建}
+\subsection{数据准备：真值图像构建}
 
 我们利用成熟的\textbf{SAM-Adapter}方法（这是一种基于预训练大模型的图像分割方法，具备很好的0样本推理能力），对图像道路进行分割，可以得到道路的mask标签，如图\ref{fig:mask}所示
 
@@ -384,7 +395,7 @@ LLE是一种非线性的流形学习方法，它假设数据在局部区域内�
 
 
 
-\subsubsection{数据预处理：滤波}
+\subsection{数据预处理：滤波}
 在先前的实验中，我们发现在分割结果中，总是会有一些噪点，经过分析，我们发现：道路通常是较为亮的点，即RGB的值均比较高的点，而在非道路中，也可能存在若干点亮度也较高，其与道路样本更加接近，使得可能把一些小的孤立点分割为道路；另一方面，道路中也存在一些颜色较暗的点，其与非道路样本更加接近，使得道路上的一些暗点可能被分割为非道路。
 \par
 为此，我们计划采用滤波的方式，对原始图像进行预处理。一方面，\textbf{非道路的亮点}会与周围的非道路样本更为接近，降低其被分割为道路的可能性；另一方面，\textbf{道路的暗点}会与周围的道路样本更加接近，增加其被分割为道路的可能性。
@@ -479,7 +490,7 @@ LLE是一种非线性的流形学习方法，它假设数据在局部区域内�
 \autoref{fig:img_filter}展示了在\autoref{tab:滤波实验参数设置}参数设置下，滤波前后的图像对比，具体滤波形式和图像类型均在图中进行了详尽的描述。
 
 
-\subsubsection{特征提取：采用PCA、KPCA、LDA、Dictionary\_Learning}
+\subsection{特征提取：采用PCA、KPCA、LDA、Dictionary\_Learning}
 在本次实验中，我们主要采用了\textbf{主成分分析}（PCA）、\textbf{核主成分分析}（KPCA）、\textbf{线性判别分析}（LDA）和\textbf{字典学习}（Dictionary Learning），在实验中，我们设置不同的参数，具体实验设置如\autoref{tab:特征提取实验参数设置}所示
 
 \begin{table}[!htbp]
@@ -511,9 +522,10 @@ LDA的参数n\_components只能为1，这是因为其在运算中$n\_components 
 通过计算，我们可以得出，总共对$1+2+2\times 4 +1+2=14$组特征提取参数进行实验对比。加之前面有5种滤波方式,那么总共有$5\times 14=70$种不同的实验设置。
 
 
-\subsubsection{流形学习方法：评估特征提取效果}
+\subsection{流形学习方法：评估特征提取效果}
 在流形学习中，我们采用t-SNE，ISOMAP，lle三种方法进行可视化特征提取效果的可视化展示，由于sklearn是在CPU条件下运行，运算速度特别慢，因此对于这三种方法，我们只针对训练集数据的特征提取效果进行可视化展示。
 \par
+\textbf{流形学习库的调研}
 通过查阅资料，我们发现关于如何高效使用t-SNE的网站{\href{https://distill.pub/2016/misread-tsne}{\textcolor{red}{(How to Use t-SNE Effectively)}}，在这个网站中，可以探究不同样本分布情况下，不同参数对于t-SNE的效果展现。
 \par
 在后续的调研中，我们发现前人在t-SNE的加速上做了很多工作，我们在github上找到了\href{https://github.com/CannyLab/tsne-cuda}{\textcolor{red}{tsne-cuda库}}，该库对于t-SNE进行了显著的加速，加速效果如\autoref{fig:tsnecuda}所示
@@ -546,17 +558,647 @@ LDA的参数n\_components只能为1，这是因为其在运算中$n\_components 
 从\autoref{fig:tsnecuda缺点}中，我们发现，sklearn上能够明显分出紫色和黄色两个类别，但是tsnecuda上，黄色和紫色混杂在了一起，区分的效果明显差于前者。
 
 \par
-抛弃了tsnecuda之后，通过调研，我们又发现了\href{https://github.com/rapidsai/cuml}{\textcolor{red}{cuML库}}，cuML是一套实现机器学习算法和数学原语函数的库，与其他RAPIDS项目共享兼容的api。cuML使数据科学家、研究人员和软件工程师能够在gpu上运行传统的表格式ML任务，而无需深入CUDA编程的细节。在大多数情况下，cuML的Python API与scikit-learn中的API相匹配。对于大型数据集，这些基于gpu的实现可以比CPU实现快10-50倍。
+抛弃了tsnecuda之后，通过调研，我们又发现了\href{https://github.com/rapidsai/cuml}{\textcolor{red}{cuML库}}，cuML是一套实现机器学习算法和数学原语函数的库，与其他RAPIDS项目共享兼容的api。cuML使数据科学家、研究人员和软件工程师能够在gpu上运行传统的表格式ML任务，而无需深入CUDA编程的细节。对于大型数据集，这些基于gpu的实现可以比CPU实现快10-50倍。
+
+\textbf{使用sklearn库完成t-SNE，ISOMAP，lle}
+%\paragraph{使用sklearn库完成t-SNE，ISOMAP，lle}
+基于前面所讲述的，我们先利用sklearn库，采用t-SNE，ISOMAP，lle三种方法进行可视化特征提取效果的可视化展示。我们现在总共具有三个维度：滤波方式、特征提取方式、流形学习方式，不易直接展示。首先我们先看滤波方式和流形学习之间的关系。
+\begin{figure}[!h]
+	\centering
+	\subfigure[中值滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/median_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[均值滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/average_blur/original_feature/feature_1_tsne.png}
+}
+	\subfigure[高斯滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/gaussian_blur/original_feature/feature_1_tsne.png}
+}
+	\subfigure[双边滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/bilateral_filter/original_feature/feature_1_tsne.png}
+}
+	\subfigure[均值迁移滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/mean_shift_filter/original_feature/feature_1_tsne.png}
+}
+
+\subfigure[中值滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/median_blur/original_feature/feature_1_isomap.png}
+}
+\subfigure[均值滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/average_blur/original_feature/feature_1_isomap.png}
+}
+\subfigure[高斯滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/gaussian_blur/original_feature/feature_1_isomap.png}
+}
+\subfigure[双边滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/bilateral_filter/original_feature/feature_1_isomap.png}
+}
+\subfigure[均值迁移滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/mean_shift_filter/original_feature/feature_1_isomap.png}
+}
+
+\subfigure[中值滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/median_blur/original_feature/feature_1_lle.png}
+}
+\subfigure[均值滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/average_blur/original_feature/feature_1_lle.png}
+}
+\subfigure[高斯滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/gaussian_blur/original_feature/feature_1_lle.png}
+}
+\subfigure[双边滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/bilateral_filter/original_feature/feature_1_lle.png}
+}
+\subfigure[均值迁移滤波]{
+	\includegraphics[width=.16\linewidth]{../output/06182/mean_shift_filter/original_feature/feature_1_lle.png}
+}
+\caption{0618.png平滤波方式与流形学习之间的关系}
+\label{fig:滤波方式与流形学习之间的关系0618}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\subfigure[中值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/median_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[均值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/average_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[高斯滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/gaussian_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[双边滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/bilateral_filter/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[均值迁移滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/mean_shift_filter/original_feature/feature_1_tsne.png}
+	}
+	
+	\subfigure[中值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/median_blur/original_feature/feature_1_isomap.png}
+	}
+	\subfigure[均值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/average_blur/original_feature/feature_1_isomap.png}
+	}
+	\subfigure[高斯滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/gaussian_blur/original_feature/feature_1_isomap.png}
+	}
+	\subfigure[双边滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/bilateral_filter/original_feature/feature_1_isomap.png}
+	}
+	\subfigure[均值迁移滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/mean_shift_filter/original_feature/feature_1_isomap.png}
+	}
+	
+	\subfigure[中值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/median_blur/original_feature/feature_1_lle.png}
+	}
+	\subfigure[均值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/average_blur/original_feature/feature_1_lle.png}
+	}
+	\subfigure[高斯滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/gaussian_blur/original_feature/feature_1_lle.png}
+	}
+	\subfigure[双边滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/bilateral_filter/original_feature/feature_1_lle.png}
+	}
+	\subfigure[均值迁移滤波]{
+		\includegraphics[width=.16\linewidth]{../output/08542/mean_shift_filter/original_feature/feature_1_lle.png}
+	}
+	\caption{0854.png滤波方式与流形学习之间的关系}
+	\label{fig:滤波方式与流形学习之间的关系0854}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\subfigure[中值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/median_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[均值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/average_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[高斯滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/gaussian_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[双边滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/bilateral_filter/original_feature/feature_1_tsne.png}
+	}
+	\subfigure[均值迁移滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/mean_shift_filter/original_feature/feature_1_tsne.png}
+	}
+	
+	\subfigure[中值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/median_blur/original_feature/feature_1_isomap.png}
+	}
+	\subfigure[均值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/average_blur/original_feature/feature_1_isomap.png}
+	}
+	\subfigure[高斯滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/gaussian_blur/original_feature/feature_1_isomap.png}
+	}
+	\subfigure[双边滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/bilateral_filter/original_feature/feature_1_isomap.png}
+	}
+	\subfigure[均值迁移滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/mean_shift_filter/original_feature/feature_1_isomap.png}
+	}
+	
+	\subfigure[中值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/median_blur/original_feature/feature_1_lle.png}
+	}
+	\subfigure[均值滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/average_blur/original_feature/feature_1_lle.png}
+	}
+	\subfigure[高斯滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/gaussian_blur/original_feature/feature_1_lle.png}
+	}
+	\subfigure[双边滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/bilateral_filter/original_feature/feature_1_lle.png}
+	}
+	\subfigure[均值迁移滤波]{
+		\includegraphics[width=.16\linewidth]{../output/10662/mean_shift_filter/original_feature/feature_1_lle.png}
+	}
+	\caption{1066.png滤波方式与流形学习之间的关系}
+	\label{fig:滤波方式与流形学习之间的关系1066}
+\end{figure}
+
+
+\autoref{fig:滤波方式与流形学习之间的关系0618}-\ref{fig:滤波方式与流形学习之间的关系1066}展示了5种滤波方式与流形学习之间的关系，从上至下分别是t-SNE，ISOMAP，lle三种方法，我们发现滤波方式对于流形学习的结果，其实也就是特征提取的结果，有一定的影响，中值滤波的效果要优于其他的方式，但是也有可能是流形学习没有做到很好的分类效果。横向上来看，t-SNE，ISOMAP，lle三种方法差别不大，后两者的分类效果要稍微差于t-SNE，但是总体来讲，差别不大。
+\par
+
+下面我们再比较特征提取与流形学习之间的关系，这里我们选取中值滤波方式。
 
 
 
+\begin{figure}[!h]
+	\centering
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/06182/median_blur/original_feature/feature_1_tsne.png}
+}
+	\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/original_feature/feature_1_isomap.png}
+}
+	\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/original_feature/feature_1_lle.png}
+}
+\vspace{-0.3cm}
+	\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/pca_feature/feature_2_tsne.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/pca_feature/feature_2_isomap.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/pca_feature/feature_2_lle.png}
+}
+\vspace{-0.3cm}
+	\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_3_tsne.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_3_isomap.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_3_lle.png}
+}
+\vspace{-0.3cm}
+	\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_4_tsne.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_4_isomap.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_4_lle.png}
+}
+\vspace{-0.3cm}
+	\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_5_tsne.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_5_isomap.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/kpca_feature/feature_5_lle.png}
+}
+\vspace{-0.3cm}
+	\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/dictionary_learning_feature/feature_7_tsne.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/dictionary_learning_feature/feature_7_isomap.png}
+}
+\subfigure{
+	\includegraphics[width=.30\linewidth]{../output/06182/median_blur/dictionary_learning_feature/feature_7_lle.png}
+}
+	
+	\caption{0618.png特征提取与流形学习之间的关系}
+	\label{fig:特征提取与流形学习之间的关系0618}
+\end{figure}
 
 
-\subsubsection{分类算法：道路分割}
+
+\begin{figure}[!h]
+	\centering
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/original_feature/feature_1_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/original_feature/feature_1_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/pca_feature/feature_2_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/pca_feature/feature_2_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/pca_feature/feature_2_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_3_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_3_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_3_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_4_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_4_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_4_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_5_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_5_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/kpca_feature/feature_5_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/dictionary_learning_feature/feature_7_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/dictionary_learning_feature/feature_7_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/08542/median_blur/dictionary_learning_feature/feature_7_lle.png}
+	}
+	
+	\caption{0854.png特征提取与流形学习之间的关系}
+	\label{fig:特征提取与流形学习之间的关系0854}
+\end{figure}
 
 
-\subsubsection{数据后处理：采用形态学方法优化结果}
 
+\begin{figure}[!h]
+	\centering
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/original_feature/feature_1_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/original_feature/feature_1_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/pca_feature/feature_2_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/pca_feature/feature_2_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/pca_feature/feature_2_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_3_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_3_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_3_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_4_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_4_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_4_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_5_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_5_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/kpca_feature/feature_5_lle.png}
+	}
+	\vspace{-0.3cm}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/dictionary_learning_feature/feature_7_tsne.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/dictionary_learning_feature/feature_7_isomap.png}
+	}
+	\subfigure{
+		\includegraphics[width=.30\linewidth]{../output/10662/median_blur/dictionary_learning_feature/feature_7_lle.png}
+	}
+	
+	\caption{1066.png特征提取与流形学习之间的关系}
+	\label{fig:特征提取与流形学习之间的关系1066}
+\end{figure}
+
+
+\par
+
+
+\autoref{fig:特征提取与流形学习之间的关系0618}-\ref{fig:特征提取与流形学习之间的关系1066}展示了不同图片，在不同特征提取条件下的流形学习图，对于每张图而言，从上至下分别为原始特征、PCA特征、KPCA（rbf）特征、KPCA（poly）特征、KPCA（sigmoid）特征、字典学习特征，从左至右，则为t-SNE，ISOMAP，lle流形学习方法。
+
+\par
+\autoref{fig:特征提取与流形学习之间的关系0618}展示了0618.png图像的特征提取与流形学习之间的关系，从中我们不难发现，PCA特征的效果要明显优于其他5种特征，t-SNE做流形学习的结果图中噪声更少，效果更佳。对于\autoref{fig:特征提取与流形学习之间的关系0854}和\autoref{fig:特征提取与流形学习之间的关系1066}有相似的结果。
+
+\textbf{使用cuML库完成t-SNE}
+前面提到cuML库可以显著加速t-SNE的计算速率，在上一部分的sklearn仅仅针对了训练集进行展示，这里我们利用加速的t-SNE可以很快计算出整个图片所有样本的流形学习图。由于效果比较相似，这里我们仅展示0618.png的结果。
+
+\begin{figure}[!h]
+	\centering
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/median_blur/original_feature/feature_1_tsne.png}
+	}
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/average_blur/original_feature/feature_1_tsne.png}
+}
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/gaussian_blur/original_feature/feature_1_tsne.png}
+}
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/bilateral_filter/original_feature/feature_1_tsne.png}
+}
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/mean_shift_filter/original_feature/feature_1_tsne.png}
+}
+	
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/median_blur/pca_feature/feature_2_tsne.png}
+}
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/average_blur/pca_feature/feature_2_tsne.png}
+}
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/gaussian_blur/pca_feature/feature_2_tsne.png}
+}
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/bilateral_filter/pca_feature/feature_2_tsne.png}
+}
+	\subfigure{
+	\includegraphics[width=.16\linewidth]{../output/0618cuml/mean_shift_filter/pca_feature/feature_2_tsne.png}
+}
+
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/median_blur/kpca_feature/feature_3_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/average_blur/kpca_feature/feature_3_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/gaussian_blur/kpca_feature/feature_3_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/bilateral_filter/kpca_feature/feature_3_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/mean_shift_filter/kpca_feature/feature_3_tsne.png}
+}
+
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/median_blur/kpca_feature/feature_4_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/average_blur/kpca_feature/feature_4_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/gaussian_blur/kpca_feature/feature_4_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/bilateral_filter/kpca_feature/feature_4_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/mean_shift_filter/kpca_feature/feature_4_tsne.png}
+}
+
+%\subfigure{
+%\includegraphics[width=.16\linewidth]{../output/0618cuml/median_blur/kpca_feature/feature_5_tsne.png}
+%}
+%\subfigure{
+%\includegraphics[width=.16\linewidth]{../output/0618cuml/average_blur/kpca_feature/feature_5_tsne.png}
+%}
+%\subfigure{
+%\includegraphics[width=.16\linewidth]{../output/0618cuml/gaussian_blur/kpca_feature/feature_5_tsne.png}
+%}
+%\subfigure{
+%\includegraphics[width=.16\linewidth]{../output/0618cuml/bilateral_filter/kpca_feature/feature_5_tsne.png}
+%}
+%\subfigure{
+%\includegraphics[width=.16\linewidth]{../output/0618cuml/mean_shift_filter/kpca_feature/feature_5_tsne.png}
+%}
+
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/median_blur/dictionary_learning_feature/feature_7_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/average_blur/dictionary_learning_feature/feature_7_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/gaussian_blur/dictionary_learning_feature/feature_7_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/bilateral_filter/dictionary_learning_feature/feature_7_tsne.png}
+}
+\subfigure{
+\includegraphics[width=.16\linewidth]{../output/0618cuml/mean_shift_filter/dictionary_learning_feature/feature_7_tsne.png}
+}
+	\caption{利用cuML计算0618.png特征提取后的t-SNE}
+	\label{fig:cuml0618}
+\end{figure}
+
+\newpage
+
+\autoref{fig:cuml0618}展示了利用cuML库使用t-SNE对0618.png图片进行流形学习的结果，从左至右，为不同的滤波方式：中值滤波、均值滤波、高斯滤波、双边滤波、均值迁移滤波，从上至下，分别为原始特征，PCA特征、KPCA（rbf）特征、KPCA（poly）特征、字典学习特征。从中我们不难发现，cuML做t-SNE的效果还是比较好的，在全样本纳入学习的情况下，能够很好的将道路和非道路特征分开。
+
+
+\subsection{分类算法：道路分割}
+前面我们提到，道路分割算法，我们采用支持向量机（Support Vector Machine，SVM），随机森林（Random Forest），K最近邻算法（K-Nearest Neighbors，KNN）进行道路分割的实验。实验的维度主要有如下三维：滤波方式、特征提取方式、分类方式。
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!h]
+	\centering
+	\caption{0618.png的准确率结果}
+	\label{tab:accuracy0618}
+	\begin{tabular}{@{}clllllllll@{}}
+		\hline
+		特征提取$\rightarrow$    & \multicolumn{3}{c}{RGB}                                                    & \multicolumn{3}{c}{PCA}                                                    & \multicolumn{3}{c}{dictionary learning}                                    \\
+		分类器$\rightarrow$     & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} \\
+		\hline
+		中值滤波                 & 97.43                   & 98.06                  & 97.47                   & 97.20                   & 94.66                  & 97.19                   & 97.13                   & 97.46                  & 96.37                   \\
+		均值滤波                 & 97.08                   & 97.58                  & 97.15                   & 96.82                   & 93.83                  & 96.64                   & 96.52                   & 97.04                  & 95.96                   \\
+		高斯滤波                 & 97.01                   & 97.53                  & 96.93                   & 96.73                   & 94.39                  & 96.49                   & 96.53                   & 96.87                  & 96.05                   \\
+		双边滤波                 & 97.66                   & 98.26                  & 97.51                   & 97.32                   & 94.04                  & 97.42                   & 96.72                   & 97.45                  & 96.35                   \\
+		均值迁移滤波               & 97.92                   & 98.09                  & 98.00                   & 97.92                   & 94.64                  & 98.10                   & 97.94                   & 97.87                  & 97.70                   \\
+		\hline
+		\multicolumn{1}{l}{} &                         &                        &                         &                         &                        &                         &                         &                        &                         \\
+		\hline
+		特征提取$\rightarrow$    & \multicolumn{3}{c}{KPCA(rbf)}                                              & \multicolumn{3}{c}{KPCA(poly)}                                             & \multicolumn{3}{c}{KPCA(cosine)}                                           \\
+		分类器$\rightarrow$     & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} \\
+		\hline
+		中值滤波                 & 64.24                   & 57.87                  & 54.95                   & 97.23                   & 95.90                  & 97.44                   & 94.31                   & 78.64                  & 94.03                   \\
+		均值滤波                 & 56.58                   & 57.87                  & 56.69                   & 96.77                   & 95.45                  & 96.95                   & 94.32                   & 82.22                  & 93.69                   \\
+		高斯滤波                 & 57.96                   & 57.87                  & 57.22                   & 96.69                   & 95.65                  & 96.57                   & 95.00                   & 83.63                  & 94.33                   \\
+		双边滤波                 & 68.04                   & 57.87                  & 57.00                   & 97.34                   & 95.64                  & 97.38                   & 95.98                   & 83.25                  & 95.66                   \\
+		均值迁移滤波               & 68.85                   & 57.87                  & 64.26                   & 97.93                   & 96.16                  & 98.17                   & 97.92                   & 88.57                  & 97.84                  \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\newpage
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!h]
+	\centering
+	\caption{0618.png的精确率结果}
+	\label{tab:precision0618}
+	\begin{tabular}{@{}clllllllll@{}}
+		\hline
+		特征提取$\rightarrow$    & \multicolumn{3}{c}{RGB}                                                    & \multicolumn{3}{c}{PCA}                                                    & \multicolumn{3}{c}{dictionary learning}                                    \\
+		分类器$\rightarrow$     & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} \\
+		\hline
+		中值滤波                 & 96.84                   & 97.49                  & 97.09                   & 96.69                   & 91.58                  & 96.84                   & 96.81                   & 96.91                  & 97.00                   \\
+		均值滤波                 & 96.29                   & 96.93                  & 96.83                   & 96.23                   & 90.39                  & 96.91                   & 95.68                   & 96.53                  & 95.84                   \\
+		高斯滤波                 & 96.62                   & 97.18                  & 96.78                   & 96.67                   & 91.20                  & 96.65                   & 96.57                   & 96.39                  & 96.03                   \\
+		双边滤波                 & 96.97                   & 97.68                  & 97.08                   & 96.80                   & 90.66                  & 97.11                   & 96.42                   & 96.85                  & 96.57                   \\
+		均值迁移滤波               & 97.03                   & 97.13                  & 97.48                   & 97.03                   & 91.57                  & 97.41                   & 97.12                   & 96.92                  & 97.20                   \\
+		\hline
+		\multicolumn{1}{l}{} &                         &                        &                         &                         &                        &                         &                         &                        &                         \\
+		\hline
+		特征提取$\rightarrow$    & \multicolumn{3}{c}{KPCA(rbf)}                                              & \multicolumn{3}{c}{KPCA(poly)}                                             & \multicolumn{3}{c}{KPCA(cosine)}                                           \\
+		分类器$\rightarrow$     & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} \\
+		\hline
+		中值滤波                 & 83.67                   & 57.87                  & 57.73                   & 96.77                   & 93.47                  & 97.19                   & 92.37                   & 73.04                  & 93.94                   \\
+		均值滤波                 & 63.09                   & 57.87                  & 58.30                   & 96.11                   & 92.84                  & 96.90                   & 92.22                   & 76.50                  & 93.39                   \\
+		高斯滤波                 & 63.57                   & 57.87                  & 58.74                   & 96.60                   & 93.11                  & 96.82                   & 92.89                   & 77.95                  & 93.93                   \\
+		双边滤波                 & 82.76                   & 57.87                  & 59.07                   & 96.76                   & 93.05                  & 97.02                   & 94.07                   & 77.55                  & 95.11                   \\
+		均值迁移滤波               & 78.55                   & 57.87                  & 67.01                   & 97.06                   & 93.90                  & 97.46                   & 96.76                   & 83.52                  & 97.20                  \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+%\vspace{5cm}
+
+
+\begin{table}[!h]
+	\vspace{1cm}
+	\centering
+	\caption{0618.png的召回率结果}
+	\label{tab:recall0618}
+	\begin{tabular}{@{}clllllllll@{}}
+		\hline
+		特征提取$\rightarrow$    & \multicolumn{3}{c}{RGB}                                                    & \multicolumn{3}{c}{PCA}                                                    & \multicolumn{3}{c}{dictionary learning}                                    \\
+		分类器$\rightarrow$     & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} \\
+		\hline
+		中值滤波                 & 98.78                   & 99.21                  & 98.58                   & 98.53                   & 99.96                  & 98.34                   & 98.29                   & 98.76                  & 96.72                   \\
+		均值滤波                 & 98.76                   & 98.96                  & 98.28                   & 98.35                   & 99.97                  & 97.30                   & 98.44                   & 98.42                  & 97.24                   \\
+		高斯滤波                 & 98.27                   & 98.59                  & 97.95                   & 97.72                   & 99.95                  & 97.30                   & 97.47                   & 98.27                  & 97.20                   \\
+		双边滤波                 & 99.05                   & 99.36                  & 98.66                   & 98.63                   & 100.00                 & 98.47                   & 97.97                   & 98.81                  & 97.14                   \\
+		均值迁移滤波               & 99.46                   & 99.65                  & 99.11                   & 99.46                   & 99.94                  & 99.35                   & 99.39                   & 99.48                  & 98.88                   \\
+		\hline
+		\multicolumn{1}{l}{} &                         &                        &                         &                         &                        &                         &                         &                        &                         \\
+		\hline
+		特征提取$\rightarrow$    & \multicolumn{3}{c}{KPCA(rbf)}                                              & \multicolumn{3}{c}{KPCA(poly)}                                             & \multicolumn{3}{c}{KPCA(cosine)}                                           \\
+		分类器$\rightarrow$     & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} \\
+		\hline
+		中值滤波                 & 47.47                   & 100.00                 & 82.71                   & 98.50                   & 99.90                  & 98.42                   & 98.28                   & 100.00                 & 95.86                   \\
+		均值滤波                 & 60.15                   & 100.00                 & 88.38                   & 98.40                   & 99.84                  & 97.86                   & 98.48                   & 100.00                 & 95.87                   \\
+		高斯滤波                 & 64.07                   & 100.00                 & 87.61                   & 97.73                   & 99.87                  & 97.27                   & 98.93                   & 100.00                 & 96.42                   \\
+		双边滤波                 & 56.56                   & 100.00                 & 83.73                   & 98.72                   & 99.93                  & 98.50                   & 99.31                   & 100.00                 & 97.52                   \\
+		均值迁移滤波               & 63.52                   & 100.00                 & 75.34                   & 99.43                   & 99.85                  & 99.43                   & 99.75                   & 99.99                  & 99.12                  \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!h]
+	\centering
+	\caption{0618.png的F1值结果}
+	\label{tab:f10618}
+	\begin{tabular}{@{}clllllllll@{}}
+		\hline
+		特征提取$\rightarrow$    & \multicolumn{3}{c}{RGB}                                                    & \multicolumn{3}{c}{PCA}                                                    & \multicolumn{3}{c}{dictionary learning}                                    \\
+		分类器$\rightarrow$     & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} \\
+		\hline
+		中值滤波                 & 97.80                   & 98.34                  & 97.83                   & 97.60                   & 95.59                  & 97.59                   & 97.54                   & 97.83                  & 96.86                   \\
+		均值滤波                 & 97.51                   & 97.93                  & 97.55                   & 97.28                   & 94.94                  & 97.11                   & 97.04                   & 97.46                  & 96.54                   \\
+		高斯滤波                 & 97.44                   & 97.88                  & 97.36                   & 97.19                   & 95.38                  & 96.97                   & 97.02                   & 97.32                  & 96.61                   \\
+		双边滤波                 & 98.00                   & 98.51                  & 97.86                   & 97.71                   & 95.10                  & 97.79                   & 97.19                   & 97.82                  & 96.86                   \\
+		均值迁移滤波               & 98.23                   & 98.37                  & 98.29                   & 98.23                   & 95.57                  & 98.37                   & 98.24                   & 98.19                  & 98.03                   \\
+		\hline
+		\multicolumn{1}{l}{} &                         &                        &                         &                         &                        &                         &                         &                        &                         \\
+		\hline
+		特征提取$\rightarrow$    & \multicolumn{3}{c}{KPCA(rbf)}                                              & \multicolumn{3}{c}{KPCA(poly)}                                             & \multicolumn{3}{c}{KPCA(cosine)}                                           \\
+		分类器$\rightarrow$     & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} & \multicolumn{1}{c}{SVM} & \multicolumn{1}{c}{RF} & \multicolumn{1}{c}{KNN} \\
+		\hline
+		中值滤波                 & 60.57                   & 73.32                  & 68.00                   & 97.63                   & 96.58                  & 97.80                   & 95.23                   & 84.42                  & 94.89                   \\
+		均值滤波                 & 61.59                   & 73.32                  & 70.26                   & 97.24                   & 96.21                  & 97.37                   & 95.25                   & 86.68                  & 94.62                   \\
+		高斯滤波                 & 63.82                   & 73.32                  & 70.33                   & 97.16                   & 96.37                  & 97.04                   & 95.81                   & 87.61                  & 95.16                   \\
+		双边滤波                 & 67.20                   & 73.32                  & 69.27                   & 97.73                   & 96.37                  & 97.75                   & 96.62                   & 87.36                  & 96.30                   \\
+		均值迁移滤波               & 70.24                   & 73.32                  & 70.93                   & 98.23                   & 96.78                  & 98.44                   & 98.23                   & 91.01                  & 98.15                  \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\autoref{tab:accuracy0618}-\ref{tab:f10618}展示了0618.png图像在5种滤波、6种特征提取、3种分类器条件下的结果，仔细观察，我们发现SVM、RF和KNN三种分类方法各有优劣。在RGB特征、字典学习特征、KPCA（poly）特征下，三者的分类效果相近，没有很大差别。RF在KPCA（rbf）下特征下，效果要优于SVM和KNN，但是在PCA特征和KPCA（cosine）特征下，RF要差于SVM、KNN。
+\par
+下面展示几个效果较好的结果
+
+
+\subsection{数据后处理：采用形态学方法优化结果}
+
+
+
+\section{流形学习各个参数的探究}
+前面我们谈到{\href{https://distill.pub/2016/misread-tsne}{\textcolor{red}{(How to Use t-SNE Effectively)}}网站中，可以对不同样本分布、不同t-SNE参数设置进行探究，实验如下。
+	
 
 \section{实验心得与体会}
 本次实验主要完成了两个方面的内容，利用KMeans和DBSCAN对道路进行分割。
@@ -575,7 +1217,11 @@ LDA的参数n\_components只能为1，这是因为其在运算中$n\_components 
 \end{itemize}
 
 
-\section{核心代码展示}
+\section{附录}
+\subsection*{附录A：图表}
+
+
+\subsection*{附录B：核心代码展示}
 
 
 \begin{mdframed}[style=codebox]

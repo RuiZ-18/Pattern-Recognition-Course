@@ -110,8 +110,13 @@ def evaluator(img, img_mask):
                 FP += 1
             else:
                 TN += 1
-    precision = TP/(TP+FP)
-    recall = TP/(TP+FN)
+    # 如果TP+FP=0，说明预测的图像中没有白色像素，此时精确率为1，召回率为0
+    if TP+FP == 0:
+        precision = 1
+        recall = 0
+    else:
+        precision = TP/(TP+FP)
+        recall = TP/(TP+FN)
     F1 = 2*precision*recall/(precision+recall)
     accuracy = (TP+TN)/(TP+TN+FP+FN)
     return {"accuracy": accuracy, "precision": precision, "recall": recall, "F1": F1}

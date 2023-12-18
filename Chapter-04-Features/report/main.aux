@@ -17,86 +17,157 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand*\HyPL@Entry[1]{}
 \HyPL@Entry{0<</S/D>>}
-\@writefile{toc}{\contentsline {section}{\numberline {一}实验目的}{2}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {一.1}实验目标}{2}{subsection.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {一.2}实验涉及到的学习内容}{2}{subsection.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {二}实验具体完成情况}{2}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {二.1}实验总体方案设计}{2}{subsection.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {二.2}具体技术途径}{3}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {二.2.1}数据准备：构建真值图像，用于后续的算法评估}{3}{subsubsection.2.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{SAM-Adapter}{3}{subsubsection.2.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{评估指标}{3}{subsubsection.2.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {二.2.2}数据预处理：对于初始图像，采用不同滤波方式对图像进行预处理}{4}{subsubsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{中值滤波（Median Filtering）}{4}{subsubsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{均值滤波（Mean Filtering）}{4}{subsubsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{高斯滤波（Gaussian Filtering）}{4}{subsubsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{双边滤波（Bilateral Filtering）}{4}{subsubsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{均值迁移滤波（Mean Shift Filtering）}{4}{subsubsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {二.2.3}特征提取：采用不同方法进行特征提取，用于后续的计算}{4}{subsubsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{原始RGB通道特征}{4}{subsubsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{主成分分析（PCA）}{5}{subsubsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{核主成分分析（KPCA）}{5}{subsubsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{线性判别分析（LDA）}{6}{subsubsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{字典学习（Dictionary Learning）}{6}{subsubsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {二.2.4}流形学习方法可视化：采用不同方法对特征提取效果进行可视化}{7}{subsubsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{t-SNE（t-Distributed Stochastic Neighbor Embedding）}{7}{subsubsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Isomap（Isometric Feature Mapping）}{7}{subsubsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{LLE（Locally Linear Embedding）}{7}{subsubsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {二.2.5}分类算法（道路分割）：采用不同的算法进行道路分割，并进行比对}{7}{subsubsection.2.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {二.2.6}数据后处理：采用不同方式对分割后的道路进行进一步优化，提升分割效果}{7}{subsubsection.2.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{开运算（Opening）}{8}{subsubsection.2.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{闭运算（Closing）}{8}{subsubsection.2.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{先开运算后闭运算}{8}{subsubsection.2.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{先闭运算后开运算}{8}{subsubsection.2.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {三}实验结果与分析}{9}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {三.0.1}数据准备：真值图像构建}{9}{subsubsection.3.0.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 道路mask标签示意图\relax }}{9}{figure.caption.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}实验目的}{3}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}实验目标}{3}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}实验涉及到的学习内容}{3}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}实验具体完成情况}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}实验总体方案设计}{3}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}具体技术途径}{4}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}数据准备：构建真值图像，用于后续的算法评估}{4}{subsubsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{SAM-Adapter}{4}{subsubsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{评估指标}{4}{subsubsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}数据预处理：对于初始图像，采用不同滤波方式对图像进行预处理}{5}{subsubsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{中值滤波（Median Filtering）}{5}{subsubsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{均值滤波（Mean Filtering）}{5}{subsubsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{高斯滤波（Gaussian Filtering）}{5}{subsubsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{双边滤波（Bilateral Filtering）}{5}{subsubsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{均值迁移滤波（Mean Shift Filtering）}{5}{subsubsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}特征提取：采用不同方法进行特征提取，用于后续的计算}{5}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{原始RGB通道特征}{5}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{主成分分析（PCA）}{6}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{核主成分分析（KPCA）}{6}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{线性判别分析（LDA）}{7}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{字典学习（Dictionary Learning）}{7}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4}流形学习方法可视化：采用不同方法对特征提取效果进行可视化}{8}{subsubsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{t-SNE（t-Distributed Stochastic Neighbor Embedding）}{8}{subsubsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Isomap（Isometric Feature Mapping）}{8}{subsubsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{LLE（Locally Linear Embedding）}{8}{subsubsection.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.5}分类算法（道路分割）：采用不同的算法进行道路分割，并进行比对}{8}{subsubsection.2.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{支持向量机（Support Vector Machine，SVM）}{8}{subsubsection.2.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{随机森林（Random Forest）}{9}{subsubsection.2.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{K最近邻算法（K-Nearest Neighbors，KNN）}{9}{subsubsection.2.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.6}数据后处理：采用不同方式对分割后的道路进行进一步优化，提升分割效果}{9}{subsubsection.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{开运算（Opening）}{9}{subsubsection.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{闭运算（Closing）}{10}{subsubsection.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{先开运算后闭运算}{10}{subsubsection.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{先闭运算后开运算}{10}{subsubsection.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}实验结果与分析}{10}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}数据准备：真值图像构建}{10}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}数据预处理：滤波}{10}{subsection.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 道路mask标签示意图\relax }}{11}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:mask}{{1}{9}{道路mask标签示意图\relax }{figure.caption.2}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {0618.png}}}{9}{figure.caption.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {0854.png}}}{9}{figure.caption.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {1066.png}}}{9}{figure.caption.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {0618\_mask.png}}}{9}{figure.caption.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {0854\_mask.png}}}{9}{figure.caption.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {1066\_mask.png}}}{9}{figure.caption.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {三.0.2}数据预处理：滤波}{9}{subsubsection.3.0.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 原始图像滤波结果\relax }}{10}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:img_filter}{{2}{10}{原始图像滤波结果\relax }{figure.caption.4}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {0618.png原图}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {0854.png原图}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {1066.png原图}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {中值滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {中值滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {中值滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {均值滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {均值滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {均值滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {高斯滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(k)}{\ignorespaces {高斯滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(l)}{\ignorespaces {高斯滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(m)}{\ignorespaces {双边滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(n)}{\ignorespaces {双边滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(o)}{\ignorespaces {双边滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(p)}{\ignorespaces {均值迁移滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(q)}{\ignorespaces {均值迁移滤波}}}{10}{figure.caption.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(r)}{\ignorespaces {均值迁移滤波}}}{10}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:mask}{{1}{11}{道路mask标签示意图\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {0618.png}}}{11}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {0854.png}}}{11}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {1066.png}}}{11}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {0618\_mask.png}}}{11}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {0854\_mask.png}}}{11}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {1066\_mask.png}}}{11}{figure.caption.2}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces 滤波实验参数设置\relax }}{11}{table.caption.3}\protected@file@percent }
 \newlabel{tab:滤波实验参数设置}{{1}{11}{滤波实验参数设置\relax }{table.caption.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {三.0.3}特征提取：采用PCA、KPCA、LDA、Dictionary\_Learning}{11}{subsubsection.3.0.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 特征提取实验参数设置\relax }}{11}{table.caption.5}\protected@file@percent }
-\newlabel{tab:特征提取实验参数设置}{{2}{11}{特征提取实验参数设置\relax }{table.caption.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {三.0.4}流形学习方法：评估特征提取效果}{11}{subsubsection.3.0.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces tsnecuda在MINIST和CIFAR数据集上与其他库运算速度的对比\relax }}{12}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:tsnecuda}{{3}{12}{tsnecuda在MINIST和CIFAR数据集上与其他库运算速度的对比\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces sklearn和tsnecuda结果对比\relax }}{12}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:tsnecuda缺点}{{4}{12}{sklearn和tsnecuda结果对比\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {sklearn上的结果}}}{12}{figure.caption.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {tsnecuda上的结果}}}{12}{figure.caption.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}特征提取：采用PCA、KPCA、LDA、Dictionary\_Learning}{11}{subsection.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 原始图像滤波结果\relax }}{12}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:img_filter}{{2}{12}{原始图像滤波结果\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {0618.png原图}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {0854.png原图}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {1066.png原图}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {中值滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {中值滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {中值滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {均值滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {均值滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {均值滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {高斯滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(k)}{\ignorespaces {高斯滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(l)}{\ignorespaces {高斯滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(m)}{\ignorespaces {双边滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(n)}{\ignorespaces {双边滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(o)}{\ignorespaces {双边滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(p)}{\ignorespaces {均值迁移滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(q)}{\ignorespaces {均值迁移滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(r)}{\ignorespaces {均值迁移滤波}}}{12}{figure.caption.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 特征提取实验参数设置\relax }}{13}{table.caption.5}\protected@file@percent }
+\newlabel{tab:特征提取实验参数设置}{{2}{13}{特征提取实验参数设置\relax }{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}流形学习方法：评估特征提取效果}{13}{subsection.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces tsnecuda在MINIST和CIFAR数据集上与其他库运算速度的对比\relax }}{13}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:tsnecuda}{{3}{13}{tsnecuda在MINIST和CIFAR数据集上与其他库运算速度的对比\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces sklearn和tsnecuda结果对比\relax }}{14}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:tsnecuda缺点}{{4}{14}{sklearn和tsnecuda结果对比\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {sklearn上的结果}}}{14}{figure.caption.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {tsnecuda上的结果}}}{14}{figure.caption.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 0618.png平滤波方式与流形学习之间的关系\relax }}{14}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:滤波方式与流形学习之间的关系0618}{{5}{14}{0618.png平滤波方式与流形学习之间的关系\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {中值滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {均值滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {高斯滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {双边滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {均值迁移滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {中值滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {均值滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {高斯滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {双边滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {均值迁移滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(k)}{\ignorespaces {中值滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(l)}{\ignorespaces {均值滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(m)}{\ignorespaces {高斯滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(n)}{\ignorespaces {双边滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(o)}{\ignorespaces {均值迁移滤波}}}{14}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces 0854.png滤波方式与流形学习之间的关系\relax }}{15}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:滤波方式与流形学习之间的关系0854}{{6}{15}{0854.png滤波方式与流形学习之间的关系\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {中值滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {均值滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {高斯滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {双边滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {均值迁移滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {中值滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {均值滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {高斯滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {双边滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {均值迁移滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(k)}{\ignorespaces {中值滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(l)}{\ignorespaces {均值滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(m)}{\ignorespaces {高斯滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(n)}{\ignorespaces {双边滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(o)}{\ignorespaces {均值迁移滤波}}}{15}{figure.caption.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 1066.png滤波方式与流形学习之间的关系\relax }}{15}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:滤波方式与流形学习之间的关系1066}{{7}{15}{1066.png滤波方式与流形学习之间的关系\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {中值滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {均值滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {高斯滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {双边滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {均值迁移滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {中值滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {均值滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {高斯滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {双边滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {均值迁移滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(k)}{\ignorespaces {中值滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(l)}{\ignorespaces {均值滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(m)}{\ignorespaces {高斯滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(n)}{\ignorespaces {双边滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(o)}{\ignorespaces {均值迁移滤波}}}{15}{figure.caption.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces 0618.png特征提取与流形学习之间的关系\relax }}{16}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:特征提取与流形学习之间的关系0618}{{8}{16}{0618.png特征提取与流形学习之间的关系\relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces 0854.png特征提取与流形学习之间的关系\relax }}{17}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:特征提取与流形学习之间的关系0854}{{9}{17}{0854.png特征提取与流形学习之间的关系\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces 1066.png特征提取与流形学习之间的关系\relax }}{18}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:特征提取与流形学习之间的关系1066}{{10}{18}{1066.png特征提取与流形学习之间的关系\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces 利用cuML计算0618.png特征提取后的t-SNE\relax }}{19}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:cuml0618}{{11}{19}{利用cuML计算0618.png特征提取后的t-SNE\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}分类算法：道路分割}{20}{subsection.3.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces 0618.png的准确率结果\relax }}{20}{table.caption.15}\protected@file@percent }
+\newlabel{tab:accuracy0618}{{3}{20}{0618.png的准确率结果\relax }{table.caption.15}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces 0618.png的精确率结果\relax }}{21}{table.caption.16}\protected@file@percent }
+\newlabel{tab:precision0618}{{4}{21}{0618.png的精确率结果\relax }{table.caption.16}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces 0618.png的召回率结果\relax }}{21}{table.caption.17}\protected@file@percent }
+\newlabel{tab:recall0618}{{5}{21}{0618.png的召回率结果\relax }{table.caption.17}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces 0618.png的F1值结果\relax }}{22}{table.caption.18}\protected@file@percent }
+\newlabel{tab:f10618}{{6}{22}{0618.png的F1值结果\relax }{table.caption.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}数据后处理：采用形态学方法优化结果}{22}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}流形学习各个参数的探究}{22}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}实验心得与体会}{22}{section.5}\protected@file@percent }
 \bibstyle{unsrt}
 \bibdata{reference}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {三.0.5}分类算法：道路分割}{13}{subsubsection.3.0.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {三.0.6}数据后处理：采用形态学方法优化结果}{13}{subsubsection.3.0.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {四}实验心得与体会}{13}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {五}存在的主要问题和建议}{13}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {六}核心代码展示}{13}{section.6}\protected@file@percent }
-\gdef \@abspage@last{13}
+\@writefile{toc}{\contentsline {section}{\numberline {6}存在的主要问题和建议}{23}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}附录}{23}{section.7}\protected@file@percent }
+\gdef \@abspage@last{23}

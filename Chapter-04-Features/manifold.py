@@ -50,20 +50,26 @@ class ManifoldPlot:
     def tsne_plot(self, filename, n_components=2, perplexity=10):
         tsne = TSNE(n_components=n_components, perplexity=perplexity)
         tsne_train_data = tsne.fit_transform(self.train_data)
-        plt.scatter(tsne_train_data[:, 0], tsne_train_data[:, 1], c=self.train_label, alpha=0.1)
+        plt.scatter(tsne_train_data[:, 0], tsne_train_data[:, 1], c=self.train_label, alpha=0.8, s=0.8)
+        plt.xlim(-100, 100)
+        plt.ylim(-100, 100)
         plt.savefig(filename)
 
     def isomap_plot(self, filename, n_components=2, n_neighbors=5):
         isomap = Isomap(n_components=n_components, n_neighbors=n_neighbors)
         isomap_train_data = isomap.fit_transform(self.train_data)
-        plt.scatter(isomap_train_data[:, 0], isomap_train_data[:, 1], c=self.train_label, alpha=0.1)
+        plt.scatter(isomap_train_data[:, 0], isomap_train_data[:, 1], c=self.train_label, alpha=0.8, s=0.8)
+        plt.xlim(-100, 100)
+        plt.ylim(-100, 100)
         plt.savefig(filename)
         # plt.show()
 
     def lle_plot(self, filename, n_components=2, n_neighbors=5):
-        lle = LocallyLinearEmbedding(n_components=n_components, n_neighbors=n_neighbors)
+        lle = LocallyLinearEmbedding(n_components=n_components, n_neighbors=n_neighbors, eigen_solver='dense')
         lle_train_data = lle.fit_transform(self.train_data)
-        plt.scatter(lle_train_data[:, 0], lle_train_data[:, 1], c=self.train_label, alpha=0.1)
+        plt.scatter(lle_train_data[:, 0], lle_train_data[:, 1], c=self.train_label, alpha=0.8, s=0.8)
+        plt.xlim(-100, 100)
+        plt.ylim(-100, 100)
         plt.savefig(filename)
 
 

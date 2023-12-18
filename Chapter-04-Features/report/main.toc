@@ -1,0 +1,45 @@
+\contentsline {section}{\numberline {1}实验目的}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}实验目标}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}实验涉及到的学习内容}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}实验具体完成情况}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}实验总体方案设计}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}具体技术途径}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}数据准备：构建真值图像，用于后续的算法评估}{4}{subsubsection.2.2.1}%
+\contentsline {paragraph}{SAM-Adapter}{4}{subsubsection.2.2.1}%
+\contentsline {paragraph}{评估指标}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}数据预处理：对于初始图像，采用不同滤波方式对图像进行预处理}{5}{subsubsection.2.2.2}%
+\contentsline {paragraph}{中值滤波（Median Filtering）}{5}{subsubsection.2.2.2}%
+\contentsline {paragraph}{均值滤波（Mean Filtering）}{5}{subsubsection.2.2.2}%
+\contentsline {paragraph}{高斯滤波（Gaussian Filtering）}{5}{subsubsection.2.2.2}%
+\contentsline {paragraph}{双边滤波（Bilateral Filtering）}{5}{subsubsection.2.2.2}%
+\contentsline {paragraph}{均值迁移滤波（Mean Shift Filtering）}{5}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}特征提取：采用不同方法进行特征提取，用于后续的计算}{5}{subsubsection.2.2.3}%
+\contentsline {paragraph}{原始RGB通道特征}{5}{subsubsection.2.2.3}%
+\contentsline {paragraph}{主成分分析（PCA）}{6}{subsubsection.2.2.3}%
+\contentsline {paragraph}{核主成分分析（KPCA）}{6}{subsubsection.2.2.3}%
+\contentsline {paragraph}{线性判别分析（LDA）}{7}{subsubsection.2.2.3}%
+\contentsline {paragraph}{字典学习（Dictionary Learning）}{7}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}流形学习方法可视化：采用不同方法对特征提取效果进行可视化}{8}{subsubsection.2.2.4}%
+\contentsline {paragraph}{t-SNE（t-Distributed Stochastic Neighbor Embedding）}{8}{subsubsection.2.2.4}%
+\contentsline {paragraph}{Isomap（Isometric Feature Mapping）}{8}{subsubsection.2.2.4}%
+\contentsline {paragraph}{LLE（Locally Linear Embedding）}{8}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}分类算法（道路分割）：采用不同的算法进行道路分割，并进行比对}{8}{subsubsection.2.2.5}%
+\contentsline {paragraph}{支持向量机（Support Vector Machine，SVM）}{8}{subsubsection.2.2.5}%
+\contentsline {paragraph}{随机森林（Random Forest）}{9}{subsubsection.2.2.5}%
+\contentsline {paragraph}{K最近邻算法（K-Nearest Neighbors，KNN）}{9}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}数据后处理：采用不同方式对分割后的道路进行进一步优化，提升分割效果}{9}{subsubsection.2.2.6}%
+\contentsline {paragraph}{开运算（Opening）}{9}{subsubsection.2.2.6}%
+\contentsline {paragraph}{闭运算（Closing）}{10}{subsubsection.2.2.6}%
+\contentsline {paragraph}{先开运算后闭运算}{10}{subsubsection.2.2.6}%
+\contentsline {paragraph}{先闭运算后开运算}{10}{subsubsection.2.2.6}%
+\contentsline {section}{\numberline {3}实验结果与分析}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}数据准备：真值图像构建}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}数据预处理：滤波}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}特征提取：采用PCA、KPCA、LDA、Dictionary\_Learning}{11}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}流形学习方法：评估特征提取效果}{13}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}分类算法：道路分割}{20}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}数据后处理：采用形态学方法优化结果}{22}{subsection.3.6}%
+\contentsline {section}{\numberline {4}流形学习各个参数的探究}{22}{section.4}%
+\contentsline {section}{\numberline {5}实验心得与体会}{22}{section.5}%
+\contentsline {section}{\numberline {6}存在的主要问题和建议}{23}{section.6}%
+\contentsline {section}{\numberline {7}附录}{23}{section.7}%

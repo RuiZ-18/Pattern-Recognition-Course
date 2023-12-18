@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.12.17)  18 DEC 2023 16:50
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.12.17)  18 DEC 2023 22:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1104,87 +1104,87 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 53.
-Package hyperref Info: Option `breaklinks' set `true' on input line 53.
+Package hyperref Info: Option `colorlinks' set `true' on input line 54.
+Package hyperref Info: Option `breaklinks' set `true' on input line 54.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 84.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 84.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 84.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 84.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 84.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 84.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 84.
-LaTeX Font Info:    Redeclaring math accent \check on input line 84.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 84.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 84.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 84.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 84.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 85.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 85.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 85.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 85.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 85.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 85.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 85.
+LaTeX Font Info:    Redeclaring math accent \check on input line 85.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 85.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 85.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 85.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 85.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 84.
+(Font)              `operators' in the math version `normal' on input line 85.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 84.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 85.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 84.
+(Font)              `operators' in the math version `bold' on input line 85.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 84.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 85.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 84.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 85.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 84.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 85.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 84.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 85.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 84.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 85.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 84.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 85.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 84.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 85.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 84.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 85.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 84.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 85.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 84.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1220,7 +1220,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 84.
+Package hyperref Info: Link coloring ON on input line 85.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1232,9 +1232,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count363
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
+LaTeX Info: Redefining \nameref on input line 85.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1266,19 +1266,19 @@ Package fontspec Info: Font family 'FandolHei-Regular(0)' created for font
 (fontspec)             <->"[FandolHei-Bold.otf]/OT:language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 89.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 90.
 
 
 Package fontspec Warning: Font "FandolKai-Regular" does not contain requested
@@ -1298,7 +1298,16 @@ Package fontspec Info: Font family 'FandolKai-Regular(0)' created for font
 
 [1
 
-]
+] (./main.toc
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 2.
+)
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -1324,11 +1333,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2]
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 152.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 152.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1356,6 +1360,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6]
 Missing character: There is no ⁻ (U+207B) in font [lmroman12-regular]:mapping=t
 ex-text;!
 Missing character: There is no ₂ (U+2082) in font [lmroman12-regular]:mapping=t
@@ -1372,20 +1385,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [7]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 349.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1395,6 +1395,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9]
 File: data/0618.png Graphic file (type bmp)
 <data/0618.png>
 File: data/0854.png Graphic file (type bmp)
@@ -1407,6 +1416,16 @@ File: data/0854_mask.png Graphic file (type bmp)
 <data/0854_mask.png>
 File: data/1066_mask.png Graphic file (type bmp)
 <data/1066_mask.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10]
 File: data/0618.png Graphic file (type bmp)
 <data/0618.png>
 File: data/0854.png Graphic file (type bmp)
@@ -1452,7 +1471,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]
+[11]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1461,7 +1480,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
+[12]
 File: pic/mnist_speedup.png Graphic file (type bmp)
 <pic/mnist_speedup.png>
 File: pic/cifar_speedup.png Graphic file (type bmp)
@@ -1479,7 +1498,158 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
+[13]
+File: ../output/06182/median_blur/original_feature/feature_1_tsne.png Graphic f
+ile (type bmp)
+<../output/06182/median_blur/original_feature/feature_1_tsne.png>
+File: ../output/06182/average_blur/original_feature/feature_1_tsne.png Graphic 
+file (type bmp)
+<../output/06182/average_blur/original_feature/feature_1_tsne.png>
+File: ../output/06182/gaussian_blur/original_feature/feature_1_tsne.png Graphic
+ file (type bmp)
+<../output/06182/gaussian_blur/original_feature/feature_1_tsne.png>
+File: ../output/06182/bilateral_filter/original_feature/feature_1_tsne.png Grap
+hic file (type bmp)
+<../output/06182/bilateral_filter/original_feature/feature_1_tsne.png>
+File: ../output/06182/mean_shift_filter/original_feature/feature_1_tsne.png Gra
+phic file (type bmp)
+<../output/06182/mean_shift_filter/original_feature/feature_1_tsne.png>
+File: ../output/06182/median_blur/original_feature/feature_1_isomap.png Graphic
+ file (type bmp)
+<../output/06182/median_blur/original_feature/feature_1_isomap.png>
+File: ../output/06182/average_blur/original_feature/feature_1_isomap.png Graphi
+c file (type bmp)
+<../output/06182/average_blur/original_feature/feature_1_isomap.png>
+File: ../output/06182/gaussian_blur/original_feature/feature_1_isomap.png Graph
+ic file (type bmp)
+<../output/06182/gaussian_blur/original_feature/feature_1_isomap.png>
+File: ../output/06182/bilateral_filter/original_feature/feature_1_isomap.png Gr
+aphic file (type bmp)
+<../output/06182/bilateral_filter/original_feature/feature_1_isomap.png>
+File: ../output/06182/mean_shift_filter/original_feature/feature_1_isomap.png G
+raphic file (type bmp)
+<../output/06182/mean_shift_filter/original_feature/feature_1_isomap.png>
+File: ../output/06182/median_blur/original_feature/feature_1_lle.png Graphic fi
+le (type bmp)
+<../output/06182/median_blur/original_feature/feature_1_lle.png>
+File: ../output/06182/average_blur/original_feature/feature_1_lle.png Graphic f
+ile (type bmp)
+<../output/06182/average_blur/original_feature/feature_1_lle.png>
+File: ../output/06182/gaussian_blur/original_feature/feature_1_lle.png Graphic 
+file (type bmp)
+<../output/06182/gaussian_blur/original_feature/feature_1_lle.png>
+File: ../output/06182/bilateral_filter/original_feature/feature_1_lle.png Graph
+ic file (type bmp)
+<../output/06182/bilateral_filter/original_feature/feature_1_lle.png>
+File: ../output/06182/mean_shift_filter/original_feature/feature_1_lle.png Grap
+hic file (type bmp)
+<../output/06182/mean_shift_filter/original_feature/feature_1_lle.png>
+File: ../output/08542/median_blur/original_feature/feature_1_tsne.png Graphic f
+ile (type bmp)
+<../output/08542/median_blur/original_feature/feature_1_tsne.png>
+File: ../output/08542/average_blur/original_feature/feature_1_tsne.png Graphic 
+file (type bmp)
+<../output/08542/average_blur/original_feature/feature_1_tsne.png>
+File: ../output/08542/gaussian_blur/original_feature/feature_1_tsne.png Graphic
+ file (type bmp)
+<../output/08542/gaussian_blur/original_feature/feature_1_tsne.png>
+File: ../output/08542/bilateral_filter/original_feature/feature_1_tsne.png Grap
+hic file (type bmp)
+<../output/08542/bilateral_filter/original_feature/feature_1_tsne.png>
+File: ../output/08542/mean_shift_filter/original_feature/feature_1_tsne.png Gra
+phic file (type bmp)
+<../output/08542/mean_shift_filter/original_feature/feature_1_tsne.png>
+File: ../output/08542/median_blur/original_feature/feature_1_isomap.png Graphic
+ file (type bmp)
+<../output/08542/median_blur/original_feature/feature_1_isomap.png>
+File: ../output/08542/average_blur/original_feature/feature_1_isomap.png Graphi
+c file (type bmp)
+<../output/08542/average_blur/original_feature/feature_1_isomap.png>
+File: ../output/08542/gaussian_blur/original_feature/feature_1_isomap.png Graph
+ic file (type bmp)
+<../output/08542/gaussian_blur/original_feature/feature_1_isomap.png>
+File: ../output/08542/bilateral_filter/original_feature/feature_1_isomap.png Gr
+aphic file (type bmp)
+<../output/08542/bilateral_filter/original_feature/feature_1_isomap.png>
+File: ../output/08542/mean_shift_filter/original_feature/feature_1_isomap.png G
+raphic file (type bmp)
+<../output/08542/mean_shift_filter/original_feature/feature_1_isomap.png>
+File: ../output/08542/median_blur/original_feature/feature_1_lle.png Graphic fi
+le (type bmp)
+<../output/08542/median_blur/original_feature/feature_1_lle.png>
+File: ../output/08542/average_blur/original_feature/feature_1_lle.png Graphic f
+ile (type bmp)
+<../output/08542/average_blur/original_feature/feature_1_lle.png>
+File: ../output/08542/gaussian_blur/original_feature/feature_1_lle.png Graphic 
+file (type bmp)
+<../output/08542/gaussian_blur/original_feature/feature_1_lle.png>
+File: ../output/08542/bilateral_filter/original_feature/feature_1_lle.png Graph
+ic file (type bmp)
+<../output/08542/bilateral_filter/original_feature/feature_1_lle.png>
+File: ../output/08542/mean_shift_filter/original_feature/feature_1_lle.png Grap
+hic file (type bmp)
+<../output/08542/mean_shift_filter/original_feature/feature_1_lle.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ../output/10662/median_blur/original_feature/feature_1_tsne.png Graphic f
+ile (type bmp)
+<../output/10662/median_blur/original_feature/feature_1_tsne.png>
+File: ../output/10662/average_blur/original_feature/feature_1_tsne.png Graphic 
+file (type bmp)
+<../output/10662/average_blur/original_feature/feature_1_tsne.png>
+File: ../output/10662/gaussian_blur/original_feature/feature_1_tsne.png Graphic
+ file (type bmp)
+<../output/10662/gaussian_blur/original_feature/feature_1_tsne.png>
+File: ../output/10662/bilateral_filter/original_feature/feature_1_tsne.png Grap
+hic file (type bmp)
+<../output/10662/bilateral_filter/original_feature/feature_1_tsne.png>
+File: ../output/10662/mean_shift_filter/original_feature/feature_1_tsne.png Gra
+phic file (type bmp)
+<../output/10662/mean_shift_filter/original_feature/feature_1_tsne.png>
+File: ../output/10662/median_blur/original_feature/feature_1_isomap.png Graphic
+ file (type bmp)
+<../output/10662/median_blur/original_feature/feature_1_isomap.png>
+File: ../output/10662/average_blur/original_feature/feature_1_isomap.png Graphi
+c file (type bmp)
+<../output/10662/average_blur/original_feature/feature_1_isomap.png>
+File: ../output/10662/gaussian_blur/original_feature/feature_1_isomap.png Graph
+ic file (type bmp)
+<../output/10662/gaussian_blur/original_feature/feature_1_isomap.png>
+File: ../output/10662/bilateral_filter/original_feature/feature_1_isomap.png Gr
+aphic file (type bmp)
+<../output/10662/bilateral_filter/original_feature/feature_1_isomap.png>
+File: ../output/10662/mean_shift_filter/original_feature/feature_1_isomap.png G
+raphic file (type bmp)
+<../output/10662/mean_shift_filter/original_feature/feature_1_isomap.png>
+File: ../output/10662/median_blur/original_feature/feature_1_lle.png Graphic fi
+le (type bmp)
+<../output/10662/median_blur/original_feature/feature_1_lle.png>
+File: ../output/10662/average_blur/original_feature/feature_1_lle.png Graphic f
+ile (type bmp)
+<../output/10662/average_blur/original_feature/feature_1_lle.png>
+File: ../output/10662/gaussian_blur/original_feature/feature_1_lle.png Graphic 
+file (type bmp)
+<../output/10662/gaussian_blur/original_feature/feature_1_lle.png>
+File: ../output/10662/bilateral_filter/original_feature/feature_1_lle.png Graph
+ic file (type bmp)
+<../output/10662/bilateral_filter/original_feature/feature_1_lle.png>
+File: ../output/10662/mean_shift_filter/original_feature/feature_1_lle.png Grap
+hic file (type bmp)
+<../output/10662/mean_shift_filter/original_feature/feature_1_lle.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (7.71991pt too wide) in paragraph at lines 728--729
+[][][]\TU/FandolSong-Regular(0)/m/n/12 图 \TU/lmr/m/n/12 5[][][]-[][]7[][]\TU/Fa
+ndolSong-Regular(0)/m/n/12 展 示 了 \TU/lmr/m/n/12 5 \TU/FandolSong-Regular(0)/m/n
+/12 种 滤 波 方 式 与 流 形 学 习 之 间 的 关 系，|  从 上 至 下 分 别 是 \TU/lmr/m/n/12 t-SNE\TU/Fand
+olSong-Regular(0)/m/n/12 ，| \TU/lmr/m/n/12 ISOMAP\TU/FandolSong-Regular(0)/m/n/
+12 ，|
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1488,10 +1658,342 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
+[14]
+File: ../output/06182/median_blur/original_feature/feature_1_tsne.png Graphic f
+ile (type bmp)
+<../output/06182/median_blur/original_feature/feature_1_tsne.png>
+File: ../output/06182/median_blur/original_feature/feature_1_isomap.png Graphic
+ file (type bmp)
+<../output/06182/median_blur/original_feature/feature_1_isomap.png>
+File: ../output/06182/median_blur/original_feature/feature_1_lle.png Graphic fi
+le (type bmp)
+<../output/06182/median_blur/original_feature/feature_1_lle.png>
+File: ../output/06182/median_blur/pca_feature/feature_2_tsne.png Graphic file (
+type bmp)
+<../output/06182/median_blur/pca_feature/feature_2_tsne.png>
+File: ../output/06182/median_blur/pca_feature/feature_2_isomap.png Graphic file
+ (type bmp)
+<../output/06182/median_blur/pca_feature/feature_2_isomap.png>
+File: ../output/06182/median_blur/pca_feature/feature_2_lle.png Graphic file (t
+ype bmp)
+<../output/06182/median_blur/pca_feature/feature_2_lle.png>
+File: ../output/06182/median_blur/kpca_feature/feature_3_tsne.png Graphic file 
+(type bmp)
+<../output/06182/median_blur/kpca_feature/feature_3_tsne.png>
+File: ../output/06182/median_blur/kpca_feature/feature_3_isomap.png Graphic fil
+e (type bmp)
+<../output/06182/median_blur/kpca_feature/feature_3_isomap.png>
+File: ../output/06182/median_blur/kpca_feature/feature_3_lle.png Graphic file (
+type bmp)
+<../output/06182/median_blur/kpca_feature/feature_3_lle.png>
+File: ../output/06182/median_blur/kpca_feature/feature_4_tsne.png Graphic file 
+(type bmp)
+<../output/06182/median_blur/kpca_feature/feature_4_tsne.png>
+File: ../output/06182/median_blur/kpca_feature/feature_4_isomap.png Graphic fil
+e (type bmp)
+<../output/06182/median_blur/kpca_feature/feature_4_isomap.png>
+File: ../output/06182/median_blur/kpca_feature/feature_4_lle.png Graphic file (
+type bmp)
+<../output/06182/median_blur/kpca_feature/feature_4_lle.png>
+File: ../output/06182/median_blur/kpca_feature/feature_5_tsne.png Graphic file 
+(type bmp)
+<../output/06182/median_blur/kpca_feature/feature_5_tsne.png>
+File: ../output/06182/median_blur/kpca_feature/feature_5_isomap.png Graphic fil
+e (type bmp)
+<../output/06182/median_blur/kpca_feature/feature_5_isomap.png>
+File: ../output/06182/median_blur/kpca_feature/feature_5_lle.png Graphic file (
+type bmp)
+<../output/06182/median_blur/kpca_feature/feature_5_lle.png>
+File: ../output/06182/median_blur/dictionary_learning_feature/feature_7_tsne.pn
+g Graphic file (type bmp)
+<../output/06182/median_blur/dictionary_learning_feature/feature_7_tsne.png>
+File: ../output/06182/median_blur/dictionary_learning_feature/feature_7_isomap.
+png Graphic file (type bmp)
+<../output/06182/median_blur/dictionary_learning_feature/feature_7_isomap.png>
+File: ../output/06182/median_blur/dictionary_learning_feature/feature_7_lle.png
+ Graphic file (type bmp)
+<../output/06182/median_blur/dictionary_learning_feature/feature_7_lle.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15]
+File: ../output/08542/median_blur/original_feature/feature_1_tsne.png Graphic f
+ile (type bmp)
+<../output/08542/median_blur/original_feature/feature_1_tsne.png>
+File: ../output/08542/median_blur/original_feature/feature_1_isomap.png Graphic
+ file (type bmp)
+<../output/08542/median_blur/original_feature/feature_1_isomap.png>
+File: ../output/08542/median_blur/original_feature/feature_1_lle.png Graphic fi
+le (type bmp)
+<../output/08542/median_blur/original_feature/feature_1_lle.png>
+File: ../output/08542/median_blur/pca_feature/feature_2_tsne.png Graphic file (
+type bmp)
+<../output/08542/median_blur/pca_feature/feature_2_tsne.png>
+File: ../output/08542/median_blur/pca_feature/feature_2_isomap.png Graphic file
+ (type bmp)
+<../output/08542/median_blur/pca_feature/feature_2_isomap.png>
+File: ../output/08542/median_blur/pca_feature/feature_2_lle.png Graphic file (t
+ype bmp)
+<../output/08542/median_blur/pca_feature/feature_2_lle.png>
+File: ../output/08542/median_blur/kpca_feature/feature_3_tsne.png Graphic file 
+(type bmp)
+<../output/08542/median_blur/kpca_feature/feature_3_tsne.png>
+File: ../output/08542/median_blur/kpca_feature/feature_3_isomap.png Graphic fil
+e (type bmp)
+<../output/08542/median_blur/kpca_feature/feature_3_isomap.png>
+File: ../output/08542/median_blur/kpca_feature/feature_3_lle.png Graphic file (
+type bmp)
+<../output/08542/median_blur/kpca_feature/feature_3_lle.png>
+File: ../output/08542/median_blur/kpca_feature/feature_4_tsne.png Graphic file 
+(type bmp)
+<../output/08542/median_blur/kpca_feature/feature_4_tsne.png>
+File: ../output/08542/median_blur/kpca_feature/feature_4_isomap.png Graphic fil
+e (type bmp)
+<../output/08542/median_blur/kpca_feature/feature_4_isomap.png>
+File: ../output/08542/median_blur/kpca_feature/feature_4_lle.png Graphic file (
+type bmp)
+<../output/08542/median_blur/kpca_feature/feature_4_lle.png>
+File: ../output/08542/median_blur/kpca_feature/feature_5_tsne.png Graphic file 
+(type bmp)
+<../output/08542/median_blur/kpca_feature/feature_5_tsne.png>
+File: ../output/08542/median_blur/kpca_feature/feature_5_isomap.png Graphic fil
+e (type bmp)
+<../output/08542/median_blur/kpca_feature/feature_5_isomap.png>
+File: ../output/08542/median_blur/kpca_feature/feature_5_lle.png Graphic file (
+type bmp)
+<../output/08542/median_blur/kpca_feature/feature_5_lle.png>
+File: ../output/08542/median_blur/dictionary_learning_feature/feature_7_tsne.pn
+g Graphic file (type bmp)
+<../output/08542/median_blur/dictionary_learning_feature/feature_7_tsne.png>
+File: ../output/08542/median_blur/dictionary_learning_feature/feature_7_isomap.
+png Graphic file (type bmp)
+<../output/08542/median_blur/dictionary_learning_feature/feature_7_isomap.png>
+File: ../output/08542/median_blur/dictionary_learning_feature/feature_7_lle.png
+ Graphic file (type bmp)
+<../output/08542/median_blur/dictionary_learning_feature/feature_7_lle.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ../output/10662/median_blur/original_feature/feature_1_tsne.png Graphic f
+ile (type bmp)
+<../output/10662/median_blur/original_feature/feature_1_tsne.png>
+File: ../output/10662/median_blur/original_feature/feature_1_isomap.png Graphic
+ file (type bmp)
+<../output/10662/median_blur/original_feature/feature_1_isomap.png>
+File: ../output/10662/median_blur/original_feature/feature_1_lle.png Graphic fi
+le (type bmp)
+<../output/10662/median_blur/original_feature/feature_1_lle.png>
+File: ../output/10662/median_blur/pca_feature/feature_2_tsne.png Graphic file (
+type bmp)
+<../output/10662/median_blur/pca_feature/feature_2_tsne.png>
+File: ../output/10662/median_blur/pca_feature/feature_2_isomap.png Graphic file
+ (type bmp)
+<../output/10662/median_blur/pca_feature/feature_2_isomap.png>
+File: ../output/10662/median_blur/pca_feature/feature_2_lle.png Graphic file (t
+ype bmp)
+<../output/10662/median_blur/pca_feature/feature_2_lle.png>
+File: ../output/10662/median_blur/kpca_feature/feature_3_tsne.png Graphic file 
+(type bmp)
+<../output/10662/median_blur/kpca_feature/feature_3_tsne.png>
+File: ../output/10662/median_blur/kpca_feature/feature_3_isomap.png Graphic fil
+e (type bmp)
+<../output/10662/median_blur/kpca_feature/feature_3_isomap.png>
+File: ../output/10662/median_blur/kpca_feature/feature_3_lle.png Graphic file (
+type bmp)
+<../output/10662/median_blur/kpca_feature/feature_3_lle.png>
+File: ../output/10662/median_blur/kpca_feature/feature_4_tsne.png Graphic file 
+(type bmp)
+<../output/10662/median_blur/kpca_feature/feature_4_tsne.png>
+File: ../output/10662/median_blur/kpca_feature/feature_4_isomap.png Graphic fil
+e (type bmp)
+<../output/10662/median_blur/kpca_feature/feature_4_isomap.png>
+File: ../output/10662/median_blur/kpca_feature/feature_4_lle.png Graphic file (
+type bmp)
+<../output/10662/median_blur/kpca_feature/feature_4_lle.png>
+File: ../output/10662/median_blur/kpca_feature/feature_5_tsne.png Graphic file 
+(type bmp)
+<../output/10662/median_blur/kpca_feature/feature_5_tsne.png>
+File: ../output/10662/median_blur/kpca_feature/feature_5_isomap.png Graphic fil
+e (type bmp)
+<../output/10662/median_blur/kpca_feature/feature_5_isomap.png>
+File: ../output/10662/median_blur/kpca_feature/feature_5_lle.png Graphic file (
+type bmp)
+<../output/10662/median_blur/kpca_feature/feature_5_lle.png>
+File: ../output/10662/median_blur/dictionary_learning_feature/feature_7_tsne.pn
+g Graphic file (type bmp)
+<../output/10662/median_blur/dictionary_learning_feature/feature_7_tsne.png>
+File: ../output/10662/median_blur/dictionary_learning_feature/feature_7_isomap.
+png Graphic file (type bmp)
+<../output/10662/median_blur/dictionary_learning_feature/feature_7_isomap.png>
+File: ../output/10662/median_blur/dictionary_learning_feature/feature_7_lle.png
+ Graphic file (type bmp)
+<../output/10662/median_blur/dictionary_learning_feature/feature_7_lle.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+
+LaTeX Warning: Text page 17 contains only floats.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
+
+LaTeX Warning: Text page 18 contains only floats.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
+File: ../output/0618cuml/median_blur/original_feature/feature_1_tsne.png Graphi
+c file (type bmp)
+<../output/0618cuml/median_blur/original_feature/feature_1_tsne.png>
+File: ../output/0618cuml/average_blur/original_feature/feature_1_tsne.png Graph
+ic file (type bmp)
+<../output/0618cuml/average_blur/original_feature/feature_1_tsne.png>
+File: ../output/0618cuml/gaussian_blur/original_feature/feature_1_tsne.png Grap
+hic file (type bmp)
+<../output/0618cuml/gaussian_blur/original_feature/feature_1_tsne.png>
+File: ../output/0618cuml/bilateral_filter/original_feature/feature_1_tsne.png G
+raphic file (type bmp)
+<../output/0618cuml/bilateral_filter/original_feature/feature_1_tsne.png>
+File: ../output/0618cuml/mean_shift_filter/original_feature/feature_1_tsne.png 
+Graphic file (type bmp)
+<../output/0618cuml/mean_shift_filter/original_feature/feature_1_tsne.png>
+File: ../output/0618cuml/median_blur/pca_feature/feature_2_tsne.png Graphic fil
+e (type bmp)
+<../output/0618cuml/median_blur/pca_feature/feature_2_tsne.png>
+File: ../output/0618cuml/average_blur/pca_feature/feature_2_tsne.png Graphic fi
+le (type bmp)
+<../output/0618cuml/average_blur/pca_feature/feature_2_tsne.png>
+File: ../output/0618cuml/gaussian_blur/pca_feature/feature_2_tsne.png Graphic f
+ile (type bmp)
+<../output/0618cuml/gaussian_blur/pca_feature/feature_2_tsne.png>
+File: ../output/0618cuml/bilateral_filter/pca_feature/feature_2_tsne.png Graphi
+c file (type bmp)
+<../output/0618cuml/bilateral_filter/pca_feature/feature_2_tsne.png>
+File: ../output/0618cuml/mean_shift_filter/pca_feature/feature_2_tsne.png Graph
+ic file (type bmp)
+<../output/0618cuml/mean_shift_filter/pca_feature/feature_2_tsne.png>
+File: ../output/0618cuml/median_blur/kpca_feature/feature_3_tsne.png Graphic fi
+le (type bmp)
+<../output/0618cuml/median_blur/kpca_feature/feature_3_tsne.png>
+File: ../output/0618cuml/average_blur/kpca_feature/feature_3_tsne.png Graphic f
+ile (type bmp)
+<../output/0618cuml/average_blur/kpca_feature/feature_3_tsne.png>
+File: ../output/0618cuml/gaussian_blur/kpca_feature/feature_3_tsne.png Graphic 
+file (type bmp)
+<../output/0618cuml/gaussian_blur/kpca_feature/feature_3_tsne.png>
+File: ../output/0618cuml/bilateral_filter/kpca_feature/feature_3_tsne.png Graph
+ic file (type bmp)
+<../output/0618cuml/bilateral_filter/kpca_feature/feature_3_tsne.png>
+File: ../output/0618cuml/mean_shift_filter/kpca_feature/feature_3_tsne.png Grap
+hic file (type bmp)
+<../output/0618cuml/mean_shift_filter/kpca_feature/feature_3_tsne.png>
+File: ../output/0618cuml/median_blur/kpca_feature/feature_4_tsne.png Graphic fi
+le (type bmp)
+<../output/0618cuml/median_blur/kpca_feature/feature_4_tsne.png>
+File: ../output/0618cuml/average_blur/kpca_feature/feature_4_tsne.png Graphic f
+ile (type bmp)
+<../output/0618cuml/average_blur/kpca_feature/feature_4_tsne.png>
+File: ../output/0618cuml/gaussian_blur/kpca_feature/feature_4_tsne.png Graphic 
+file (type bmp)
+<../output/0618cuml/gaussian_blur/kpca_feature/feature_4_tsne.png>
+File: ../output/0618cuml/bilateral_filter/kpca_feature/feature_4_tsne.png Graph
+ic file (type bmp)
+<../output/0618cuml/bilateral_filter/kpca_feature/feature_4_tsne.png>
+File: ../output/0618cuml/mean_shift_filter/kpca_feature/feature_4_tsne.png Grap
+hic file (type bmp)
+<../output/0618cuml/mean_shift_filter/kpca_feature/feature_4_tsne.png>
+File: ../output/0618cuml/median_blur/dictionary_learning_feature/feature_7_tsne
+.png Graphic file (type bmp)
+<../output/0618cuml/median_blur/dictionary_learning_feature/feature_7_tsne.png>
+
+File: ../output/0618cuml/average_blur/dictionary_learning_feature/feature_7_tsn
+e.png Graphic file (type bmp)
+<../output/0618cuml/average_blur/dictionary_learning_feature/feature_7_tsne.png
+>
+File: ../output/0618cuml/gaussian_blur/dictionary_learning_feature/feature_7_ts
+ne.png Graphic file (type bmp)
+<../output/0618cuml/gaussian_blur/dictionary_learning_feature/feature_7_tsne.pn
+g>
+File: ../output/0618cuml/bilateral_filter/dictionary_learning_feature/feature_7
+_tsne.png Graphic file (type bmp)
+<../output/0618cuml/bilateral_filter/dictionary_learning_feature/feature_7_tsne
+.png>
+File: ../output/0618cuml/mean_shift_filter/dictionary_learning_feature/feature_
+7_tsne.png Graphic file (type bmp)
+<../output/0618cuml/mean_shift_filter/dictionary_learning_feature/feature_7_tsn
+e.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 581.
+(mdframed)              on input line 1225.
 
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
@@ -1506,21 +2008,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13] (./main.aux)
+[23] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 53FCF13930FA01857D28745D03854156;3919.
+(rerunfilecheck)             Checksum: 0F6B7DF18519013F9DDC94F438E00FB5;3939.
  )
-(\end occurred inside a group at level 1)
+(\end occurred inside a group at level 2)
 
-### simple group (level 1) entered at line 517 ({)
+### simple group (level 2) entered at line 1198 ({)
+### simple group (level 1) entered at line 529 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 32481 strings out of 476191
- 683391 string characters out of 5812071
- 1183425 words of memory out of 5000000
- 52613 multiletter control sequences out of 15000+600000
+ 33353 strings out of 476191
+ 742075 string characters out of 5812071
+ 1188426 words of memory out of 5000000
+ 53420 multiletter control sequences out of 15000+600000
  488006 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,12n,105p,1220b,1448s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,12n,105p,1220b,1516s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (13 pages).
+Output written on main.pdf (23 pages).
