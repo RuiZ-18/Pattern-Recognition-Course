@@ -49,7 +49,7 @@ for filter_item in filter_list:
             dict({'n_components': i, 'kernel': j}) for i in range(1, 3) for j in ['rbf', 'poly', 'sigmoid', 'cosine']
         ],
         lda_feature=[dict({'n_components': i}) for i in range(1, 2)],
-        dictoinary_learning_feature=[dict({'n_components': i}) for i in range(1, 3)]
+        dictionary_learning_feature=[dict({'n_components': i}) for i in range(1, 3)]
     )
 
     # 特征提取，需要把feature_extractor_params传入
