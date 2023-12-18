@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.12.17)  17 DEC 2023 22:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.12.17)  18 DEC 2023 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1409,6 +1409,40 @@ File: data/1066_mask.png Graphic file (type bmp)
 <data/1066_mask.png>
 File: data/0618.png Graphic file (type bmp)
 <data/0618.png>
+File: data/0854.png Graphic file (type bmp)
+<data/0854.png>
+File: data/1066.png Graphic file (type bmp)
+<data/1066.png>
+File: 1_image_processing/median_blur_0618.png Graphic file (type bmp)
+<1_image_processing/median_blur_0618.png>
+File: 1_image_processing/median_blur_0854.png Graphic file (type bmp)
+<1_image_processing/median_blur_0854.png>
+File: 1_image_processing/median_blur_1066.png Graphic file (type bmp)
+<1_image_processing/median_blur_1066.png>
+File: 1_image_processing/average_blur_0618.png Graphic file (type bmp)
+<1_image_processing/average_blur_0618.png>
+File: 1_image_processing/average_blur_0854.png Graphic file (type bmp)
+<1_image_processing/average_blur_0854.png>
+File: 1_image_processing/average_blur_1066.png Graphic file (type bmp)
+<1_image_processing/average_blur_1066.png>
+File: 1_image_processing/gaussian_blur_0618.png Graphic file (type bmp)
+<1_image_processing/gaussian_blur_0618.png>
+File: 1_image_processing/gaussian_blur_0854.png Graphic file (type bmp)
+<1_image_processing/gaussian_blur_0854.png>
+File: 1_image_processing/gaussian_blur_1066.png Graphic file (type bmp)
+<1_image_processing/gaussian_blur_1066.png>
+File: 1_image_processing/bilateral_filter_0618.png Graphic file (type bmp)
+<1_image_processing/bilateral_filter_0618.png>
+File: 1_image_processing/bilateral_filter_0854.png Graphic file (type bmp)
+<1_image_processing/bilateral_filter_0854.png>
+File: 1_image_processing/bilateral_filter_0854.png Graphic file (type bmp)
+<1_image_processing/bilateral_filter_0854.png>
+File: 1_image_processing/mean_shift_filter_0618.png Graphic file (type bmp)
+<1_image_processing/mean_shift_filter_0618.png>
+File: 1_image_processing/mean_shift_filter_0854.png Graphic file (type bmp)
+<1_image_processing/mean_shift_filter_0854.png>
+File: 1_image_processing/mean_shift_filter_1066.png Graphic file (type bmp)
+<1_image_processing/mean_shift_filter_1066.png>
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1419,6 +1453,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10]
 File: pic/mnist_speedup.png Graphic file (type bmp)
 <pic/mnist_speedup.png>
 File: pic/cifar_speedup.png Graphic file (type bmp)
@@ -1432,7 +1475,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
+[11]
 File: pic/sklearn_res.png Graphic file (type bmp)
 <pic/sklearn_res.png>
 File: pic/tsnecuda_res.png Graphic file (type bmp)
@@ -1446,10 +1489,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
+[12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 519.
+(mdframed)              on input line 580.
 
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
@@ -1464,24 +1507,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12] (./main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[13] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 53FCF13930FA01857D28745D03854156;3919.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 461 ({)
+### simple group (level 1) entered at line 517 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 32368 strings out of 476191
- 678484 string characters out of 5812071
- 1179425 words of memory out of 5000000
- 52515 multiletter control sequences out of 15000+600000
+ 32481 strings out of 476191
+ 683391 string characters out of 5812071
+ 1183425 words of memory out of 5000000
+ 52613 multiletter control sequences out of 15000+600000
  488006 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,12n,105p,1220b,1448s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (12 pages).
+Output written on main.pdf (13 pages).

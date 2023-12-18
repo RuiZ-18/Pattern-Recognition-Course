@@ -56,7 +56,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancypagestyle{secondpage}{
-    \fancyfoot[L]{\footnotesize Code is available on \href{https://github.com/RuiZ-18/Pattern-Recognition-Course/tree/main/Chapter-04-Features}{https://github.com/RuiZ-18/Pattern-Recognition-Course/tree/main/Chapter-04-Features}}
+    \fancyfoot[L]{\footnotesize Code is available on \href{https://github.com/RuiZ-18/Pattern-Recognition-Course/tree/main/Chapter-04-Features}{\textcolor{red}{https://github.com/RuiZ-18/Pattern-Recognition-Course/tree/main/Chapter-04-Features}}}
     \fancyfoot[C]{\thepage}
     \fancyfoot[R]{}
     \renewcommand{\footrulewidth}{0.2pt}
@@ -126,12 +126,12 @@
 \subsection{实验总体方案设计}
 实验需要利用聚类算法对道路进行二值化分割，具体分为如下6步
 \begin{itemize}
-    \item 数据准备：构建真值图像，用于后续的算法评估
-    \item 数据预处理：对于初始图像，采用中值滤波、均值滤波、高斯滤波等方式对图像进行预处理
-    \item 特征提取：采用不同方法进行特征提取，用于后续的计算，例如原始RGB通道特征、主成分分析（PCA）、核主成分分析（KPCA）、线性判别（LDA）、字典学习（Dictionary Learning）等
-    \item 流形学习方法可视化：采用t-SNE（t-Distributed Stochastic Neighbor Embedding）、等度量特征映射（Isometric Feature Mapping，Isomap）、局部线性嵌入（Locally Linear Embedding，LLE）等方法对特征提取效果进行可视化
-    \item 分类算法（道路分割）：采用不同的算法进行道路分割，并进行比对，例如支持向量机（SVM）、
-    \item 数据后处理：采用开运算、闭运算及二者结合的方式对分割后的道路进行进一步优化，提升分割效果
+    \item \textbf{数据准备}：构建真值图像，用于后续的算法评估
+    \item \textbf{数据预处理}：对于初始图像，采用中值滤波、均值滤波、高斯滤波等方式对图像进行预处理
+    \item \textbf{特征提取}：采用不同方法进行特征提取，用于后续的计算，例如原始RGB通道特征、主成分分析（PCA）、核主成分分析（KPCA）、线性判别（LDA）、字典学习（Dictionary Learning）等
+    \item \textbf{流形学习方法可视化}：采用t-SNE（t-Distributed Stochastic Neighbor Embedding）、等度量特征映射（Isometric Feature Mapping，Isomap）、局部线性嵌入（Locally Linear Embedding，LLE）等方法对特征提取效果进行可视化
+    \item \textbf{分类算法}（道路分割）：采用不同的算法进行道路分割，并进行比对，例如支持向量机（SVM）、
+    \item \textbf{数据后处理}：采用开运算、闭运算及二者结合的方式对分割后的道路进行进一步优化，提升分割效果
 
 \end{itemize}
 由于本人对 python 较为感兴趣，且后续科研工具主要为python语言，因此报告主要基于python完成上述任务。
@@ -389,7 +389,7 @@ LLE是一种非线性的流形学习方法，它假设数据在局部区域内�
 \par
 为此，我们计划采用滤波的方式，对原始图像进行预处理。一方面，非道路的亮点会与周围的非道路样本更为接近，降低其被分割为道路的可能性；另一方面，道路的暗点会与周围的道路样本更加接近，增加其被分割为道路的可能性。
 \par
-在实验中，采用的滤波方式有中值滤波、均值滤波、高斯滤波、双边滤波、均值迁移滤波，我们设置的滤波参数如\autoref{tab:滤波实验参数设置}所示
+在实验中，采用的滤波方式有中值滤波、均值滤波、高斯滤波、双边滤波、均值迁移滤波，我们设置的滤波参数如\autoref{tab:滤波实验参数设置}所示，原先我们计划对于滤波设置不同的参数，对不同滤波参数也进行比较，考虑到实验量较大，且本次实验的核心不在于此，因此，我们精心为每一种滤波仅挑选了一组参数进行实验。
 
 \begin{table}[!htbp]
 
@@ -413,18 +413,70 @@ LLE是一种非线性的流形学习方法，它假设数据在局部区域内�
     \label{tab:滤波实验参数设置}
 \end{table}
 
-\par
-
-\autoref{fig:img_filter}展示了在\autoref{tab:滤波实验参数设置}参数设置下，滤波前后的图像对比
 
 \begin{figure}[htbp]
   \centering
-\includegraphics[width=0.3\linewidth]{data/0618.png}
+  \subfigure[0618.png原图]{
+  	\includegraphics[width=0.3\linewidth]{data/0618.png}
+  }
+  \subfigure[0854.png原图]{
+	\includegraphics[width=0.3\linewidth]{data/0854.png}
+}
+  \subfigure[1066.png原图]{
+	\includegraphics[width=0.3\linewidth]{data/1066.png}
+}
+  \subfigure[中值滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/median_blur_0618.png}
+}
+  \subfigure[中值滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/median_blur_0854.png}
+}
+  \subfigure[中值滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/median_blur_1066.png}
+}
+  \subfigure[均值滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/average_blur_0618.png}
+}
+  \subfigure[均值滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/average_blur_0854.png}
+}
+  \subfigure[均值滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/average_blur_1066.png}
+}
+  \subfigure[高斯滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/gaussian_blur_0618.png}
+}
+\subfigure[高斯滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/gaussian_blur_0854.png}
+}
+\subfigure[高斯滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/gaussian_blur_1066.png}
+}
+  \subfigure[双边滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/bilateral_filter_0618.png}
+}
+\subfigure[双边滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/bilateral_filter_0854.png}
+}
+\subfigure[双边滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/bilateral_filter_0854.png}
+}
+  \subfigure[均值迁移滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/mean_shift_filter_0618.png}
+}
+\subfigure[均值迁移滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/mean_shift_filter_0854.png}
+}
+\subfigure[均值迁移滤波]{
+	\includegraphics[width=0.3\linewidth]{1_image_processing/mean_shift_filter_1066.png}
+}
 \caption{原始图像滤波结果}
 \label{fig:img_filter}
 \end{figure}
 
+\par
 
+\autoref{fig:img_filter}展示了在\autoref{tab:滤波实验参数设置}参数设置下，滤波前后的图像对比，具体滤波形式和图像类型均在图中进行了详尽的描述。
 
 
 \subsubsection{特征提取：采用PCA、KPCA、LDA、Dictionary\_Learning}
@@ -443,7 +495,7 @@ LLE是一种非线性的流形学习方法，它假设数据在局部区域内�
         PCA  & n\_components=1,2 \\
         
         KPCA & n\_components=1,2 \\
-          & kernel=rbf, poly, sigmoid, cosine, precomputed \\
+          & kernel=rbf, poly, sigmoid, cosine \\
           
         LDA  & n\_components=1 \\
         
@@ -455,12 +507,14 @@ LLE是一种非线性的流形学习方法，它假设数据在局部区域内�
 
 \par
 LDA的参数n\_components只能为1，这是因为其在运算中$n\_components \le \min (feaures, n\_classes)$
+\par
+通过计算，我们可以得出，总共对$1+2+2\times 4 +1+2=14$组特征提取参数进行实验对比。加之前面有5种滤波方式，加上原图一共有6种不同的输入,那么总共有$6\times 14=84$种不同的实验设置。
 
 
 \subsubsection{流形学习方法：评估特征提取效果}
-通过查阅资料，我们发现关于如何高效使用t-SNE的网站{\href{https://distill.pub/2016/misread-tsne}{\textcolor{red}{(How to Use t-SNE Effectively)}}，在这个网站中，可以探究不同样本分布情况下，不同参数对于t-SNE的效果展现。
+在流形学习中，我们采用t-SNE，ISOMAP，lle三种方法进行可视化特征提取效果的可视化展示，由于sklearn是在CPU条件下运行，运算速度特别慢，因此对于这三种方法，我们只针对训练集数据的特征提取效果进行可视化展示。
 \par
-在流行学习中，我们采用t-SNE，ISOMAP，lle三种方法进行可视化特征提取效果的可视化展示，由于sklearn是在CPU条件下运行，运算速度特别慢，因此对于这三种方法，我们只针对训练集数据的特征提取效果进行可视化展示。
+通过查阅资料，我们发现关于如何高效使用t-SNE的网站{\href{https://distill.pub/2016/misread-tsne}{\textcolor{red}{(How to Use t-SNE Effectively)}}，在这个网站中，可以探究不同样本分布情况下，不同参数对于t-SNE的效果展现。
 \par
 在后续的调研中，我们发现前人在t-SNE的加速上做了很多工作，我们在github上找到了\href{https://github.com/CannyLab/tsne-cuda}{\textcolor{red}{tsne-cuda库}}，该库对于t-SNE进行了显著的加速，加速效果如\autoref{fig:tsnecuda}所示
 \begin{figure}[htbp]
@@ -476,8 +530,7 @@ LDA的参数n\_components只能为1，这是因为其在运算中$n\_components 
 \end{figure}
 
 \par
-原本以为,可以采用tsnecuda进行加速，但是tsnecuda存在很多问题，其中之一就是不能用pca作为初始化，然后通过实验对比，我们发现其效果远不如sklearn。从\autoref{fig:tsnecuda缺点}中，我们不难发现，sklearn上的效果明显要优于tsnecuda。
-
+原本以为,可以采用tsnecuda进行加速，但是tsnecuda存在很多问题，其中之一就是不能用pca作为初始化。通过本地的实验对比，我们发现其效果远不如sklearn。从\autoref{fig:tsnecuda缺点}中，我们不难发现，sklearn上的效果明显要优于tsnecuda。
 \begin{figure}[htbp]
 	\centering
 	\subfigure[sklearn上的结果]{
@@ -489,6 +542,14 @@ LDA的参数n\_components只能为1，这是因为其在运算中$n\_components 
 	\caption{sklearn和tsnecuda结果对比}
 	\label{fig:tsnecuda缺点}
 \end{figure}
+
+从\autoref{fig:tsnecuda缺点}中，我们发现，sklearn上能够明显分出紫色和黄色两个类别，但是tsnecuda上，黄色和紫色混杂在了一起，区分的效果明显差于前者。
+
+\par
+抛弃了tsnecuda之后，通过调研，我们又发现了\href{https://github.com/rapidsai/cuml}{\textcolor{red}{cuML库}}，cuML是一套实现机器学习算法和数学原语函数的库，与其他RAPIDS项目共享兼容的api。cuML使数据科学家、研究人员和软件工程师能够在gpu上运行传统的表格式ML任务，而无需深入CUDA编程的细节。在大多数情况下，cuML的Python API与scikit-learn中的API相匹配。对于大型数据集，这些基于gpu的实现可以比CPU实现快10-50倍。
+
+
+
 
 \subsubsection{分类算法：道路分割}
 
