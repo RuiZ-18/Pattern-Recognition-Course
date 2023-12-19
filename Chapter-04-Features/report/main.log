@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.12.17)  19 DEC 2023 11:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.12.17)  19 DEC 2023 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2097,9 +2097,125 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
+File: ../output/4_post_processing/0618/svm/opening.png Graphic file (type bmp)
+<../output/4_post_processing/0618/svm/opening.png>
+File: ../output/4_post_processing/0618/svm/closing.png Graphic file (type bmp)
+<../output/4_post_processing/0618/svm/closing.png>
+File: ../output/4_post_processing/0618/svm/opening_closing.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/0618/svm/opening_closing.png>
+File: ../output/4_post_processing/0618/svm/closing_opening.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/0618/svm/closing_opening.png>
+File: ../output/4_post_processing/0618/random_forest/opening.png Graphic file (
+type bmp)
+<../output/4_post_processing/0618/random_forest/opening.png>
+File: ../output/4_post_processing/0618/random_forest/closing.png Graphic file (
+type bmp)
+<../output/4_post_processing/0618/random_forest/closing.png>
+File: ../output/4_post_processing/0618/random_forest/opening_closing.png Graphi
+c file (type bmp)
+<../output/4_post_processing/0618/random_forest/opening_closing.png>
+File: ../output/4_post_processing/0618/random_forest/closing_opening.png Graphi
+c file (type bmp)
+<../output/4_post_processing/0618/random_forest/closing_opening.png>
+File: ../output/4_post_processing/0618/knn/opening.png Graphic file (type bmp)
+<../output/4_post_processing/0618/knn/opening.png>
+File: ../output/4_post_processing/0618/knn/closing.png Graphic file (type bmp)
+<../output/4_post_processing/0618/knn/closing.png>
+File: ../output/4_post_processing/0618/knn/opening_closing.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/0618/knn/opening_closing.png>
+File: ../output/4_post_processing/0618/knn/closing_opening.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/0618/knn/closing_opening.png>
+File: ../output/4_post_processing/0854/svm/opening.png Graphic file (type bmp)
+<../output/4_post_processing/0854/svm/opening.png>
+File: ../output/4_post_processing/0854/svm/closing.png Graphic file (type bmp)
+<../output/4_post_processing/0854/svm/closing.png>
+File: ../output/4_post_processing/0854/svm/opening_closing.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/0854/svm/opening_closing.png>
+File: ../output/4_post_processing/0854/svm/closing_opening.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/0854/svm/closing_opening.png>
+File: ../output/4_post_processing/0854/random_forest/opening.png Graphic file (
+type bmp)
+<../output/4_post_processing/0854/random_forest/opening.png>
+File: ../output/4_post_processing/0854/random_forest/closing.png Graphic file (
+type bmp)
+<../output/4_post_processing/0854/random_forest/closing.png>
+File: ../output/4_post_processing/0854/random_forest/opening_closing.png Graphi
+c file (type bmp)
+<../output/4_post_processing/0854/random_forest/opening_closing.png>
+File: ../output/4_post_processing/0854/random_forest/closing_opening.png Graphi
+c file (type bmp)
+<../output/4_post_processing/0854/random_forest/closing_opening.png>
+File: ../output/4_post_processing/0854/knn/opening.png Graphic file (type bmp)
+<../output/4_post_processing/0854/knn/opening.png>
+File: ../output/4_post_processing/0854/knn/closing.png Graphic file (type bmp)
+<../output/4_post_processing/0854/knn/closing.png>
+File: ../output/4_post_processing/0854/knn/opening_closing.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/0854/knn/opening_closing.png>
+File: ../output/4_post_processing/0854/knn/closing_opening.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/0854/knn/closing_opening.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+File: ../output/4_post_processing/1066/svm/opening.png Graphic file (type bmp)
+<../output/4_post_processing/1066/svm/opening.png>
+File: ../output/4_post_processing/1066/svm/closing.png Graphic file (type bmp)
+<../output/4_post_processing/1066/svm/closing.png>
+File: ../output/4_post_processing/1066/svm/opening_closing.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/1066/svm/opening_closing.png>
+File: ../output/4_post_processing/1066/svm/closing_opening.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/1066/svm/closing_opening.png>
+File: ../output/4_post_processing/1066/random_forest/opening.png Graphic file (
+type bmp)
+<../output/4_post_processing/1066/random_forest/opening.png>
+File: ../output/4_post_processing/1066/random_forest/closing.png Graphic file (
+type bmp)
+<../output/4_post_processing/1066/random_forest/closing.png>
+File: ../output/4_post_processing/1066/random_forest/opening_closing.png Graphi
+c file (type bmp)
+<../output/4_post_processing/1066/random_forest/opening_closing.png>
+File: ../output/4_post_processing/1066/random_forest/closing_opening.png Graphi
+c file (type bmp)
+<../output/4_post_processing/1066/random_forest/closing_opening.png>
+File: ../output/4_post_processing/1066/knn/opening.png Graphic file (type bmp)
+<../output/4_post_processing/1066/knn/opening.png>
+File: ../output/4_post_processing/1066/knn/closing.png Graphic file (type bmp)
+<../output/4_post_processing/1066/knn/closing.png>
+File: ../output/4_post_processing/1066/knn/opening_closing.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/1066/knn/opening_closing.png>
+File: ../output/4_post_processing/1066/knn/closing_opening.png Graphic file (ty
+pe bmp)
+<../output/4_post_processing/1066/knn/closing_opening.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1272.
+(mdframed)              on input line 1423.
 
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
@@ -2113,7 +2229,94 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23]
+[25]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1472.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1514.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1549.
+
+Overfull \hbox (333.68204pt too wide) in paragraph at lines 1601--1602
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][]  
+ []
+
+
+Overfull \hbox (169.43071pt too wide) in paragraph at lines 1636--1637
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (38.02965pt too wide) in paragraph at lines 1657--1658
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31]
 No file main.bbl.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2123,22 +2326,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24] (./main.aux)
+[32] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0F6B7DF18519013F9DDC94F438E00FB5;3939.
  )
 (\end occurred inside a group at level 2)
 
-### simple group (level 2) entered at line 1245 ({)
+### simple group (level 2) entered at line 1391 ({)
 ### simple group (level 1) entered at line 532 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 34538 strings out of 476191
- 769028 string characters out of 5812071
- 1209581 words of memory out of 5000000
- 54565 multiletter control sequences out of 15000+600000
- 488006 words of font info for 141 fonts, out of 8000000 for 9000
+ 34939 strings out of 476191
+ 787303 string characters out of 5812071
+ 1608581 words of memory out of 5000000
+ 54952 multiletter control sequences out of 15000+600000
+ 488014 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 102i,12n,105p,1220b,1516s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,12n,105p,1220b,1474s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (24 pages).
+Output written on main.pdf (32 pages).

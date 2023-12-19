@@ -23,10 +23,26 @@ class ImageProcess:
     def mean_shift_filter(self, sp=10, sr=50):
         self.img = cv2.pyrMeanShiftFiltering(self.image, sp, sr)
 
-    def open_operation(self, ksize=(5, 5)):
+    def opening(self, filename, ksize=(10, 10)):
         kernel = np.ones(ksize, np.uint8)
         self.img = cv2.morphologyEx(self.image, cv2.MORPH_OPEN, kernel)
+        cv2.imwrite(filename, self.img)
 
-    def close_operation(self, ksize=(5, 5)):
+    def closing(self, filename, ksize=(10, 10)):
         kernel = np.ones(ksize, np.uint8)
         self.img = cv2.morphologyEx(self.image, cv2.MORPH_CLOSE, kernel)
+        cv2.imwrite(filename, self.img)
+
+    def opening_closing(self, filename, ksize=(10, 10)):
+        kernel = np.ones(ksize, np.uint8)
+        self.img = cv2.morphologyEx(self.image, cv2.MORPH_OPEN, kernel)
+        kernel = np.ones(ksize, np.uint8)
+        self.img = cv2.morphologyEx(self.img, cv2.MORPH_CLOSE, kernel)
+        cv2.imwrite(filename, self.img)
+
+    def closing_opening(self, filename, ksize=(10, 10)):
+        kernel = np.ones(ksize, np.uint8)
+        self.img = cv2.morphologyEx(self.image, cv2.MORPH_CLOSE, kernel)
+        kernel = np.ones(ksize, np.uint8)
+        self.img = cv2.morphologyEx(self.img, cv2.MORPH_OPEN, kernel)
+        cv2.imwrite(filename, self.img)
