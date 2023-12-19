@@ -39,7 +39,13 @@
 \contentsline {subsection}{\numberline {3.4}流形学习方法：评估特征提取效果}{13}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}分类算法：道路分割}{20}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}数据后处理：采用形态学方法优化结果}{23}{subsection.3.6}%
-\contentsline {section}{\numberline {4}流形学习各个参数的探究}{24}{section.4}%
-\contentsline {section}{\numberline {5}实验心得与体会}{24}{section.5}%
-\contentsline {section}{\numberline {6}存在的主要问题和建议}{25}{section.6}%
-\contentsline {section}{\numberline {7}附录}{25}{section.7}%
+\contentsline {section}{\numberline {4}流形学习的初探}{24}{section.4}%
+\contentsline {section}{\numberline {5}实验心得与体会}{26}{section.5}%
+\contentsline {section}{\numberline {6}存在的主要问题和建议}{26}{section.6}%
+\contentsline {subsubsection}{\numberline {6.0.1}主要问题}{26}{subsubsection.6.0.1}%
+\contentsline {subsubsection}{\numberline {6.0.2}未来展望}{27}{subsubsection.6.0.2}%
+\contentsline {section}{\numberline {7}附录}{27}{section.7}%
+\contentsline {subsection}{\numberline {7.1}ImageProcess（图像处理）}{27}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}FeatureExtractor（特征提取）}{28}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}ManifoldPlot（流形学习）}{29}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}utils（功能函数部分）}{31}{subsection.7.4}%

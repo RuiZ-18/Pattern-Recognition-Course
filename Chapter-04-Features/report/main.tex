@@ -1387,39 +1387,91 @@ LDA的参数n\_components只能为1，这是因为其在运算中$n\_components 
 \par
 对于1066.png图像的结果\autoref{fig:1066opearation}而言，svm的结果有点优化过渡了，使得道路小于原先的道路。而rf和knn的结果较好，能够将道路进行很好的分割。
 
-\section{流形学习各个参数的探究}
-前面我们谈到{\href{https://distill.pub/2016/misread-tsne}{\textcolor{red}{(How to Use t-SNE Effectively)}}网站中，可以对不同样本分布、不同t-SNE参数设置进行探究。
-	
+\section{流形学习的初探}
+前面我们谈到{\href{https://distill.pub/2016/misread-tsne}{\textcolor{red}{(How to Use t-SNE Effectively)}}网站中，可以对不同样本分布、不同t-SNE参数设置进行探究。通过对该网站的学习，使得我对于t-SNE的参数有了更加深刻的理解。该网站主要总结内容如下几点
+\begin{itemize}
+\item t-SNE图中的簇大小毫无意义，如\autoref{fig:1}
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{pic/1.png}
+\caption{t-SNE图中的簇大小毫无意义}
+\label{fig:1}
+\end{figure}
 
+\item 集群之间的距离可能没有任何意义，如\autoref{fig:2}
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{pic/2.png}
+\caption{集群之间的距离可能没有任何意义}
+\label{fig:2}
+\end{figure}
+
+\item 随机噪声并不总是随机的，如\autoref{fig:3}
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{pic/3.png}
+\caption{随机噪声并不总是随机的}
+\label{fig:3}
+\end{figure}
+
+\item 有时可以看到一些形状，如\autoref{fig:4}
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{pic/4.png}
+\caption{有时可以看到一些形状}
+\label{fig:4}
+\end{figure}
+
+\item 对于拓扑可能需要多个绘图，如\autoref{fig:5}
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{pic/5.png}
+\caption{对于拓扑可能需要多个绘图}
+\label{fig:5}
+\end{figure}
+\end{itemize}
+\par
+
+t-SNE非常灵活，并且通常可以找到其他降维算法无法找到的结构。不幸的是，这种灵活性使得解释变得棘手。在用户看不见的地方，该算法会进行各种调整以整理其可视化效果，有时并不能达到我们想要的效果。
 	
-\par	
-我们仅仅对简单的参数和分布进行了初步探索，由于时间有限，没有进行更加详尽的探究。
 	
 
 \section{实验心得与体会}
-本次实验主要完成了两个方面的内容，利用KMeans和DBSCAN对道路进行分割。
+本次实验主要在完成道路分割的基础上，对于流形学习中的t-SNE进行了初步探究。
+\par
+在道路分割时，将整体实验分为了6个步骤。
+\begin{itemize}
+\item \textbf{数据准备}\quad 我们利用SAM-Adapter构建真值图像，避免了手工标注的繁琐。我们构建了评价标准：准确率（Accuracy）、精确率（Precision）、召回率（Recall）、F1值来对后续的道路分割效果进行评价。
+\item \textbf{数据与处理}\quad 从前面三次实验中，我们总结出可以采用滤波来提升后续分割效果，设计了中值滤波、均值滤波、高斯滤波、双边滤波、均值迁移滤波5种方式。
+\item \textbf{特征提取}\quad 特征提取我们主要采用了5类14种不同方法，包括RGB，PCA，KPCA（poly，rbf，sigmoid，cosine），lda，字典学习，并设计了不同的参数进行比对
+\item \textbf{流形学习}\quad 我们采用t-SNE，ISOMAP，lle三种不同的方式进行比对，同时针对t-SNE，比对了Python的sklearn，tsnecuda，cuML库，最终发现cuML库能够对特征展现得既快又好。
+\item \textbf{分类算法}\quad 我们采用svm，random forest，knn三种方式，对前期不同滤波、不同特征提取条件下的图像进行道路分割，发现random forest的效果最佳。
+\item \textbf{数据后处理}\quad 我们比对了不同的形态学处理方式（开运算、闭运算、先开运算后闭运算、先闭运算后开运算），发现不同处理方式对于不同道路、不同分类方法的效果不尽相同，总体而言，先开运算后闭运算的效果要略优。
+\end{itemize}
 
-在使用KMeans进行分割时，我们设置了不同的聚类数目，从2到9，聚类的效果在3和4的时候达到比较好的状态。
+在对流形学习的t-SNE进行探究时，我们没有做很多实验，主要采用查阅资料的方式，发现不同参数、不同数据分布对于t-SNE最后的展现结果有很大的影响。
 
-在使用DBSCAN进行分割时，我们对不同的eps（0.1,0.5,1.0），不同的min\_samples（1,2,$\cdots$,9）进行实验，发现当eps为0.1和0.5时，在min\_samples为5左右的效果比较好，而当eps为1.0时，整体分类效果较差，几乎不能看见道路。
-
+总体而言，这次实验投入的时间比之前3次都要更多，实验设置更为多样，实验探究更为深入，也有了不错的收获。
 
 \section{存在的主要问题和建议}
 
+\subsubsection{主要问题}
 \begin{itemize}
-    \item 使用DBSCAN求解时，运算速度明显慢于KMeans。
-    \item 在KMeans实验中，可以采用选取若干道路的样本点，计算其中心，然后与聚类中心进行距离的判别，设置阈值，实现对于道路判别；由于我们道路拍摄视角较为固定，可以设置一个权重图，其为一个等腰三角形，位于图像正中间，尝试采用加权的KMeans聚类方法进行道路分割并实现对类别的判别。
-    \item 在DBSCAN实验中，使用了不同的eps和min\_samples进行实验，但是没有很好的对结果进行解释。
+    \item 由于实验参数设置过多，没有将所有的特点和问题都写出来，只是选取了部分较为直观、突出的点进行展示。
+    \item 在用sklearn做流形学习时，对于特征的可视化效果不是很好。另一方面，sklearn和cuML对于t-SNE进行可视化展示时，二者的效果有明显差异，有可能是函数内部的问题。
+    \item 对于流形学习有了一定的了解，也进行了初步探索，但是由于时间有限，没有进行更加深入的探究。
 \end{itemize}
 
+\subsubsection{未来展望}
+\begin{itemize}
+    \item 如果有时间，后续可以更加系统地设置不同的参数，进行更加详尽地进行研究。
+    \item 进一步深挖流形学习，深入研究各个参数设置、不同样本分布条件下的流形学习结果可视化展示。
+    \item 进一步探索特征提取，尝试更多样，更高效的特征提取算法。
+\end{itemize}
 
 \section{附录}
-\subsection*{附录A：图表}
-
-
-\subsection*{附录B：核心代码展示}
-
-
+\subsection{ImageProcess（图像处理）}
+图像处理核心代码，包含滤波、形态学处理
 \begin{mdframed}[style=codebox]
 \begin{lstlisting}
 class ImageProcess:
@@ -1468,7 +1520,8 @@ class ImageProcess:
 \end{lstlisting}
 \end{mdframed}
 
-
+\subsection{FeatureExtractor（特征提取）}
+特征提取核心代码，包含不同特征的提取方式
 \begin{mdframed}[style=codebox]
 \begin{lstlisting}
 class FeatureExtractor:
@@ -1510,7 +1563,8 @@ class FeatureExtractor:
 \end{mdframed}
 
 
-
+\subsection{ManifoldPlot（流形学习）}
+流形学习核心代码，包含不同流形学习方法以及可视化
 \begin{mdframed}[style=codebox]
 \begin{lstlisting}
 class ManifoldPlot:
@@ -1546,6 +1600,8 @@ class ManifoldPlot:
 \end{lstlisting}
 \end{mdframed}
 
+\subsection{utils（功能函数部分）}
+功能函数核心代码，包含图像自动采样、图像评估函数
 \begin{mdframed}[style=codebox]
 \begin{lstlisting}
 def auto_sample(data_dir, img_name, output_dir, sample_interval_list):
