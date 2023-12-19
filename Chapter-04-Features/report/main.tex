@@ -19,6 +19,9 @@
 \usepackage{subcaption}
 \usepackage{subfigure}
 
+\usepackage{graphicx}
+
+\usepackage[export]{adjustbox}
 % 代码块
 \usepackage{listings}
 % \usepackage{fontspec}
@@ -364,28 +367,28 @@ K最近邻算法是一种基于实例的学习算法，它在道路分割中常�
 \begin{figure}[htbp]
   \centering
 \subfigure[0618.png]{
-\includegraphics[width=0.3\linewidth]{data/0618.png}
+\includegraphics[width=0.3\linewidth]{../data/0618.png}
 %\caption{fig1}
 }
 % \quad
 \subfigure[0854.png]{
-\includegraphics[width=0.3\linewidth]{data/0854.png}
+\includegraphics[width=0.3\linewidth]{../data/0854.png}
 }
 % \quad
 \subfigure[1066.png]{
-\includegraphics[width=0.3\linewidth]{data/1066.png}
+\includegraphics[width=0.3\linewidth]{../data/1066.png}
 }
 
 \subfigure[0618\_mask.png]{
-\includegraphics[width=0.3\linewidth]{data/0618_mask.png}
+\includegraphics[width=0.3\linewidth]{../data/0618_mask.png}
 }
 % \quad
 \subfigure[0854\_mask.png]{
-\includegraphics[width=0.3\linewidth]{data/0854_mask.png}
+\includegraphics[width=0.3\linewidth]{../data/0854_mask.png}
 }
 % \quad
 \subfigure[1066\_mask.png]{
-\includegraphics[width=0.3\linewidth]{data/1066_mask.png}
+\includegraphics[width=0.3\linewidth]{../data/1066_mask.png}
 }
 \caption{道路mask标签示意图}
 \label{fig:mask}
@@ -428,58 +431,58 @@ K最近邻算法是一种基于实例的学习算法，它在道路分割中常�
 \begin{figure}[htbp]
   \centering
   \subfigure[0618.png原图]{
-  	\includegraphics[width=0.3\linewidth]{data/0618.png}
+  	\includegraphics[width=0.3\linewidth]{../data/0618.png}
   }
   \subfigure[0854.png原图]{
-	\includegraphics[width=0.3\linewidth]{data/0854.png}
+	\includegraphics[width=0.3\linewidth]{../data/0854.png}
 }
   \subfigure[1066.png原图]{
-	\includegraphics[width=0.3\linewidth]{data/1066.png}
+	\includegraphics[width=0.3\linewidth]{../data/1066.png}
 }
   \subfigure[中值滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/median_blur_0618.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/median_blur_0618.png}
 }
   \subfigure[中值滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/median_blur_0854.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/median_blur_0854.png}
 }
   \subfigure[中值滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/median_blur_1066.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/median_blur_1066.png}
 }
   \subfigure[均值滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/average_blur_0618.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/average_blur_0618.png}
 }
   \subfigure[均值滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/average_blur_0854.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/average_blur_0854.png}
 }
   \subfigure[均值滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/average_blur_1066.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/average_blur_1066.png}
 }
   \subfigure[高斯滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/gaussian_blur_0618.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/gaussian_blur_0618.png}
 }
 \subfigure[高斯滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/gaussian_blur_0854.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/gaussian_blur_0854.png}
 }
 \subfigure[高斯滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/gaussian_blur_1066.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/gaussian_blur_1066.png}
 }
   \subfigure[双边滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/bilateral_filter_0618.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/bilateral_filter_0618.png}
 }
 \subfigure[双边滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/bilateral_filter_0854.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/bilateral_filter_0854.png}
 }
 \subfigure[双边滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/bilateral_filter_0854.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/bilateral_filter_0854.png}
 }
   \subfigure[均值迁移滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/mean_shift_filter_0618.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/mean_shift_filter_0618.png}
 }
 \subfigure[均值迁移滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/mean_shift_filter_0854.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/mean_shift_filter_0854.png}
 }
 \subfigure[均值迁移滤波]{
-	\includegraphics[width=0.3\linewidth]{1_image_processing/mean_shift_filter_1066.png}
+	\includegraphics[width=0.3\linewidth]{../output/1_image_processing/mean_shift_filter_1066.png}
 }
 \caption{原始图像滤波结果}
 \label{fig:img_filter}
@@ -1187,9 +1190,51 @@ LDA的参数n\_components只能为1，这是因为其在运算中$n\_components 
 	\end{tabular}
 \end{table}
 
-\autoref{tab:accuracy0618}-\ref{tab:f10618}展示了0618.png图像在5种滤波、6种特征提取、3种分类器条件下的结果，仔细观察，我们发现SVM、RF和KNN三种分类方法各有优劣。在RGB特征、字典学习特征、KPCA（poly）特征下，三者的分类效果相近，没有很大差别。RF在KPCA（rbf）下特征下，效果要优于SVM和KNN，但是在PCA特征和KPCA（cosine）特征下，RF要差于SVM、KNN。
+
 \par
-下面展示几个效果较好的结果
+\autoref{tab:accuracy0618}-\ref{tab:f10618}展示了0618.png图像在5种滤波、6种特征提取、3种分类器条件下的结果，仔细观察，我们发现SVM、RF和KNN三种分类方法各有优劣。在RGB特征、字典学习特征、KPCA（poly）特征下，三者的分类效果相近，没有很大差别。RF在KPCA（rbf）下特征下，效果要优于SVM和KNN，但是在PCA特征和KPCA（cosine）特征下，RF要差于SVM、KNN。0854.png和1066.png的分类结果表格详见附录。
+
+
+\begin{figure}[!h]
+	\centering
+	\subfigure{
+	\includegraphics[width=.2\linewidth, frame]{../output/0618classifiers/mean_shift_filter/original_feature/feature_1_svm.png}	
+}
+	\subfigure{
+	\includegraphics[width=.2\linewidth, frame]{../output/0618classifiers/mean_shift_filter/original_feature/feature_1_random_forest.png}	
+}
+	\subfigure{
+	\includegraphics[width=.2\linewidth, frame]{../output/0618classifiers/mean_shift_filter/original_feature/feature_1_knn.png}	
+}
+
+\subfigure{
+	\includegraphics[width=.2\linewidth, frame]{../output/0854classifiers/mean_shift_filter/original_feature/feature_1_svm.png}	
+}
+\subfigure{
+\includegraphics[width=.2\linewidth, frame]{../output/0854classifiers/mean_shift_filter/original_feature/feature_1_random_forest.png}	
+}
+\subfigure{
+\includegraphics[width=.2\linewidth, frame]{../output/0854classifiers/mean_shift_filter/original_feature/feature_1_knn.png}	
+}
+
+\subfigure{
+	\includegraphics[width=.2\linewidth, frame]{../output/1066classifiers/mean_shift_filter/original_feature/feature_1_svm.png}	
+}
+\subfigure{
+\includegraphics[width=.2\linewidth, frame]{../output/1066classifiers/mean_shift_filter/original_feature/feature_1_random_forest.png}	
+}
+\subfigure{
+\includegraphics[width=.2\linewidth, frame]{../output/1066classifiers/mean_shift_filter/original_feature/feature_1_knn.png}	
+}
+
+
+	\caption{利用svm、rf、knn对图像进行道路分割的结果}
+	\label{fig:classifier}
+\end{figure}
+
+
+\par
+\autoref{fig:classifier}展示了利用不同分类器，对图像进行道路分割的结果，从左至右，分别为SVM，Random Forest，KNN三种分类器，从中不难发现，Random Forest的分类效果最好，其在0618.png图像中，能够将左上角的白点进行很好的剔除。SVM的效果较差，尤其是在0854.png图像中，只能分类出一半的图像。KNN对于边缘有较好的效果，相较于前两种分类器边缘更加平滑。
 
 
 \subsection{数据后处理：采用形态学方法优化结果}

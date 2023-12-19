@@ -38,8 +38,8 @@
 \contentsline {subsection}{\numberline {3.3}特征提取：采用PCA、KPCA、LDA、Dictionary\_Learning}{11}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}流形学习方法：评估特征提取效果}{13}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}分类算法：道路分割}{20}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}数据后处理：采用形态学方法优化结果}{22}{subsection.3.6}%
-\contentsline {section}{\numberline {4}流形学习各个参数的探究}{22}{section.4}%
-\contentsline {section}{\numberline {5}实验心得与体会}{22}{section.5}%
+\contentsline {subsection}{\numberline {3.6}数据后处理：采用形态学方法优化结果}{23}{subsection.3.6}%
+\contentsline {section}{\numberline {4}流形学习各个参数的探究}{23}{section.4}%
+\contentsline {section}{\numberline {5}实验心得与体会}{23}{section.5}%
 \contentsline {section}{\numberline {6}存在的主要问题和建议}{23}{section.6}%
 \contentsline {section}{\numberline {7}附录}{23}{section.7}%
